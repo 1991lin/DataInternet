@@ -14,12 +14,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConfigurationServiceImpl implements ConfigurationService {
 
-
     @Autowired
     private ConfigurationDaoImpl configurationDao;
 
     @Override
     public String getConfigurationDsl() {
         return configurationDao.getConfigurationDsl();
+    }
+
+    @Override
+    public String parameterJson() {
+        return configurationDao.getConfigurationParametersJson();
     }
 }

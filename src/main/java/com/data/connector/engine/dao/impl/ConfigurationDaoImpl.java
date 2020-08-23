@@ -16,4 +16,12 @@ public class ConfigurationDaoImpl implements ConfigurationDao {
         return "select * from database.table.a join database.table.b " +
                 "on database.table.a.name = database.table.b.name";
     }
+
+    @Override
+    public String getConfigurationParametersJson() {
+        return "{\n" +
+                "  \"name\" : \"A\",\n" +
+                "  \"citi\" : \"wuhang\"\n" +
+                "}";
+    }
 }

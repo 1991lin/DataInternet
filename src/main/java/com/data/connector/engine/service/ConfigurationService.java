@@ -6,6 +6,14 @@ package com.data.connector.engine.service;
  **/
 public interface ConfigurationService {
 
+    /**
+     * get configuration DSL
+     *
+     * @return
+     */
     String getConfigurationDsl();
+
+
+    String parameterJson();
 
 }

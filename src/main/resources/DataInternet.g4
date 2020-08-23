@@ -105,7 +105,7 @@ singleTableSchema
 statement
     : query                                                            #statementDefault
     | ctes? dmlStatementNoWith                                         #dmlStatement
-    | USE NAMESPACE? multipartIdentifier                               #use
+    | USE NAMESPACE? multipartIdentifier                                #use
     | CREATE namespace (IF NOT EXISTS)? multipartIdentifier
         (commentSpec |
          locationSpec |
@@ -669,7 +669,7 @@ orderedIdentifierList
     ;
 
 orderedIdentifier
-    : ident=errorCapturingIdentifier ordering=(ASC | DESC)?
+    : ident=errorCapturingIdentifier ordering=(ASC | DESC )?
     ;
 
 identifierCommentList
@@ -1489,7 +1489,7 @@ AFTER: 'AFTER';
 ALL: 'ALL';
 ALTER: 'ALTER';
 ANALYZE: 'ANALYZE';
-AND: 'AND';
+AND: 'AND' | 'and';
 ANTI: 'ANTI';
 ANY: 'ANY';
 ARCHIVE: 'ARCHIVE';
@@ -1498,11 +1498,11 @@ AS: 'AS' | 'as';
 ASC: 'ASC' | 'asc';
 AT: 'AT';
 AUTHORIZATION: 'AUTHORIZATION';
-BETWEEN: 'BETWEEN';
+BETWEEN: 'BETWEEN' | 'between';
 BOTH: 'BOTH';
 BUCKET: 'BUCKET';
 BUCKETS: 'BUCKETS';
-BY: 'BY';
+BY: 'BY' | 'by';
 CACHE: 'CACHE';
 CASCADE: 'CASCADE';
 CASE: 'CASE';
@@ -1515,8 +1515,8 @@ CLUSTERED: 'CLUSTERED';
 CODEGEN: 'CODEGEN';
 COLLATE: 'COLLATE';
 COLLECTION: 'COLLECTION';
-COLUMN: 'COLUMN';
-COLUMNS: 'COLUMNS';
+COLUMN: 'COLUMN' | 'column';
+COLUMNS: 'COLUMNS' | 'columns';
 COMMENT: 'COMMENT';
 COMMIT: 'COMMIT';
 COMPACT: 'COMPACT';
@@ -1551,12 +1551,12 @@ DISTRIBUTE: 'DISTRIBUTE';
 DIV: 'DIV';
 DROP: 'DROP';
 ELSE: 'ELSE';
-END: 'END';
+END: 'END' | 'end';
 ESCAPE: 'ESCAPE';
 ESCAPED: 'ESCAPED';
 EXCEPT: 'EXCEPT';
 EXCHANGE: 'EXCHANGE';
-EXISTS: 'EXISTS';
+EXISTS: 'EXISTS' | 'exists';
 EXPLAIN: 'EXPLAIN';
 EXPORT: 'EXPORT';
 EXTENDED: 'EXTENDED';
@@ -1579,17 +1579,17 @@ FUNCTION: 'FUNCTION';
 FUNCTIONS: 'FUNCTIONS';
 GLOBAL: 'GLOBAL';
 GRANT: 'GRANT';
-GROUP: 'GROUP';
-GROUPING: 'GROUPING';
-HAVING: 'HAVING';
+GROUP: 'GROUP' | 'group';
+GROUPING: 'GROUPING' | 'grouping';
+HAVING: 'HAVING' | 'having';
 HOUR: 'HOUR';
 IF: 'IF' | 'if';
 IGNORE: 'IGNORE';
 IMPORT: 'IMPORT';
-IN: 'IN';
+IN: 'IN' | 'in';
 INDEX: 'INDEX';
 INDEXES: 'INDEXES';
-INNER: 'INNER';
+INNER: 'INNER' | 'inner';
 INPATH: 'INPATH';
 INPUTFORMAT: 'INPUTFORMAT';
 INSERT: 'INSERT';
@@ -1604,15 +1604,15 @@ LAST: 'LAST';
 LATERAL: 'LATERAL';
 LAZY: 'LAZY';
 LEADING: 'LEADING';
-LEFT: 'LEFT';
-LIKE: 'LIKE';
+LEFT: 'LEFT' | 'left';
+LIKE: 'LIKE' | 'like';
 LIMIT: 'LIMIT';
 LINES: 'LINES';
 LIST: 'LIST';
 LOAD: 'LOAD';
 LOCAL: 'LOCAL';
 LOCATION: 'LOCATION';
-LOCK: 'LOCK';
+LOCK: 'LOCK' | 'lock';
 LOCKS: 'LOCKS';
 LOGICAL: 'LOGICAL';
 MACRO: 'MACRO';
@@ -1626,7 +1626,7 @@ NAMESPACE: 'NAMESPACE';
 NAMESPACES: 'NAMESPACES';
 NATURAL: 'NATURAL';
 NO: 'NO';
-NOT: 'NOT' | '!';
+NOT: 'NOT' | '!' | 'not';
 NULL: 'NULL';
 NULLS: 'NULLS';
 OF: 'OF';
@@ -1733,7 +1733,7 @@ USING: 'USING';
 VALUES: 'VALUES';
 VIEW: 'VIEW';
 VIEWS: 'VIEWS';
-WHEN: 'WHEN';
+WHEN: 'WHEN' | 'when';
 WHERE: 'WHERE' | 'where';
 WINDOW: 'WINDOW';
 WITH: 'WITH';

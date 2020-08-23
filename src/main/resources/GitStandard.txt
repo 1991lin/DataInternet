@@ -1,0 +1,16 @@
+# main type
+feat:     add new feature
+fix:      fix bug
+
+# special type
+docs:     just change the docs related
+style:    just style change and also not change the code logic
+build:    build tool configuration change
+refactor: refactor the code
+revert:   when doing git revert
+
+# not used type
+test:     add the test case or change the test related codes
+perf:     performance improvement
+ci:       continue integration related changes
+chore:    not related the src and test folder changes

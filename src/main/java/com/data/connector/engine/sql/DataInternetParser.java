@@ -1,13 +1,18 @@
 // Generated from /Users/eric/IdeaProjects/DataInternet/src/main/resources/DataInternet.g4 by ANTLR 4.8
 package com.data.connector.engine.sql;
-import org.antlr.v4.runtime.atn.*;
-import org.antlr.v4.runtime.dfa.DFA;
 import org.antlr.v4.runtime.*;
-import org.antlr.v4.runtime.misc.*;
-import org.antlr.v4.runtime.tree.*;
-import java.util.List;
-import java.util.Iterator;
+import org.antlr.v4.runtime.atn.ATN;
+import org.antlr.v4.runtime.atn.ATNDeserializer;
+import org.antlr.v4.runtime.atn.ParserATNSimulator;
+import org.antlr.v4.runtime.atn.PredictionContextCache;
+import org.antlr.v4.runtime.dfa.DFA;
+import org.antlr.v4.runtime.misc.Utils;
+import org.antlr.v4.runtime.tree.ParseTreeListener;
+import org.antlr.v4.runtime.tree.ParseTreeVisitor;
+import org.antlr.v4.runtime.tree.TerminalNode;
+
 import java.util.ArrayList;
+import java.util.List;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
 public class DataInternetParser extends Parser {
@@ -150,51 +155,50 @@ public class DataInternetParser extends Parser {
 	public static final String[] ruleNames = makeRuleNames();
 
 	private static String[] makeLiteralNames() {
-		return new String[] {
-			null, "';'", "'('", "')'", "','", "'.'", "'/*+'", "'*/'", "'->'", "'['", 
-			"']'", "':'", "'ADD'", "'AFTER'", "'ALL'", "'ALTER'", "'ANALYZE'", "'AND'", 
-			"'ANTI'", "'ANY'", "'ARCHIVE'", "'ARRAY'", "'AS'", "'ASC'", "'AT'", "'AUTHORIZATION'", 
-			"'BETWEEN'", "'BOTH'", "'BUCKET'", "'BUCKETS'", "'BY'", "'CACHE'", "'CASCADE'", 
-			"'CASE'", "'CAST'", "'CHANGE'", "'CHECK'", "'CLEAR'", "'CLUSTER'", "'CLUSTERED'", 
-			"'CODEGEN'", "'COLLATE'", "'COLLECTION'", "'COLUMN'", "'COLUMNS'", "'COMMENT'", 
-			"'COMMIT'", "'COMPACT'", "'COMPACTIONS'", "'COMPUTE'", "'CONCATENATE'", 
-			"'CONSTRAINT'", "'COST'", "'CREATE'", "'CROSS'", "'CUBE'", "'CURRENT'", 
-			"'CURRENT_DATE'", "'CURRENT_TIME'", "'CURRENT_TIMESTAMP'", "'CURRENT_USER'", 
-			"'DATA'", "'DATABASE'", null, "'DAY'", "'DBPROPERTIES'", "'DEFINED'", 
-			"'DELETE'", "'DELIMITED'", null, "'DESCRIBE'", "'DFS'", "'DIRECTORIES'", 
-			"'DIRECTORY'", null, "'DISTRIBUTE'", "'DIV'", "'DROP'", "'ELSE'", "'END'", 
-			"'ESCAPE'", "'ESCAPED'", "'EXCEPT'", "'EXCHANGE'", "'EXISTS'", "'EXPLAIN'", 
-			"'EXPORT'", "'EXTENDED'", "'EXTERNAL'", "'EXTRACT'", "'FALSE'", "'FETCH'", 
-			"'FIELDS'", "'FILTER'", "'FILEFORMAT'", "'FIRST'", "'FOLLOWING'", "'FOR'", 
-			"'FOREIGN'", "'FORMAT'", "'FORMATTED'", null, "'FULL'", "'FUNCTION'", 
-			"'FUNCTIONS'", "'GLOBAL'", "'GRANT'", "'GROUP'", "'GROUPING'", "'HAVING'", 
-			"'HOUR'", null, "'IGNORE'", "'IMPORT'", "'IN'", "'INDEX'", "'INDEXES'", 
-			"'INNER'", "'INPATH'", "'INPUTFORMAT'", "'INSERT'", "'INTERSECT'", "'INTERVAL'", 
-			"'INTO'", "'IS'", "'ITEMS'", null, "'KEYS'", "'LAST'", "'LATERAL'", "'LAZY'", 
-			"'LEADING'", "'LEFT'", "'LIKE'", "'LIMIT'", "'LINES'", "'LIST'", "'LOAD'", 
-			"'LOCAL'", "'LOCATION'", "'LOCK'", "'LOCKS'", "'LOGICAL'", "'MACRO'", 
-			"'MAP'", "'MATCHED'", "'MERGE'", "'MINUTE'", "'MONTH'", "'MSCK'", "'NAMESPACE'", 
-			"'NAMESPACES'", "'NATURAL'", "'NO'", null, "'NULL'", "'NULLS'", "'OF'", 
-			null, "'ONLY'", "'OPTION'", "'OPTIONS'", null, null, "'OUT'", "'OUTER'", 
-			"'OUTPUTFORMAT'", "'OVER'", "'OVERLAPS'", "'OVERLAY'", "'OVERWRITE'", 
-			"'PARTITION'", "'PARTITIONED'", "'PARTITIONS'", "'PERCENT'", "'PIVOT'", 
-			"'PLACING'", "'POSITION'", "'PRECEDING'", "'PRIMARY'", "'PRINCIPALS'", 
-			"'PROPERTIES'", "'PURGE'", "'QUERY'", "'RANGE'", "'RECORDREADER'", "'RECORDWRITER'", 
-			"'RECOVER'", "'REDUCE'", "'REFERENCES'", "'REFRESH'", "'RENAME'", "'REPAIR'", 
-			"'REPLACE'", "'RESET'", "'RESTRICT'", "'REVOKE'", "'RIGHT'", null, "'ROLE'", 
-			"'ROLES'", "'ROLLBACK'", "'ROLLUP'", "'ROW'", "'ROWS'", "'SCHEMA'", "'SECOND'", 
-			null, "'SEMI'", "'SEPARATED'", "'SERDE'", "'SERDEPROPERTIES'", "'SESSION_USER'", 
-			"'SET'", "'MINUS'", "'SETS'", "'SHOW'", "'SKEWED'", "'SOME'", "'SORT'", 
-			"'SORTED'", "'START'", "'STATISTICS'", "'STORED'", "'STRATIFY'", "'STRUCT'", 
-			"'SUBSTR'", "'SUBSTRING'", null, "'TABLES'", "'TABLESAMPLE'", "'TBLPROPERTIES'", 
-			null, "'TERMINATED'", "'THEN'", "'TIME'", "'TO'", "'TOUCH'", "'TRAILING'", 
-			"'TRANSACTION'", "'TRANSACTIONS'", "'TRANSFORM'", "'TRIM'", "'TRUE'", 
-			"'TRUNCATE'", "'TYPE'", "'UNARCHIVE'", "'UNBOUNDED'", "'UNCACHE'", "'UNION'", 
-			"'UNIQUE'", "'UNKNOWN'", "'UNLOCK'", "'UNSET'", "'UPDATE'", "'USE'", 
-			"'USER'", "'USING'", "'VALUES'", "'VIEW'", "'VIEWS'", "'WHEN'", null, 
-			"'WINDOW'", "'WITH'", "'YEAR'", "'ZONE'", null, "'<=>'", "'<>'", "'!='", 
-			"'<'", null, "'>'", null, "'+'", "'-'", "'*'", "'/'", "'%'", "'~'", "'&'", 
-			"'|'", "'||'", "'^'"
+		return new String[]{
+				null, "';'", "'('", "')'", "','", "'.'", "'/*+'", "'*/'", "'->'", "'['",
+				"']'", "':'", "'ADD'", "'AFTER'", "'ALL'", "'ALTER'", "'ANALYZE'", null,
+				"'ANTI'", "'ANY'", "'ARCHIVE'", "'ARRAY'", null, null, "'AT'", "'AUTHORIZATION'",
+				null, "'BOTH'", "'BUCKET'", "'BUCKETS'", null, "'CACHE'", "'CASCADE'",
+				"'CASE'", "'CAST'", "'CHANGE'", "'CHECK'", "'CLEAR'", "'CLUSTER'", "'CLUSTERED'",
+				"'CODEGEN'", "'COLLATE'", "'COLLECTION'", null, null, "'COMMENT'", "'COMMIT'",
+				"'COMPACT'", "'COMPACTIONS'", "'COMPUTE'", "'CONCATENATE'", "'CONSTRAINT'",
+				"'COST'", "'CREATE'", "'CROSS'", "'CUBE'", "'CURRENT'", "'CURRENT_DATE'",
+				"'CURRENT_TIME'", "'CURRENT_TIMESTAMP'", "'CURRENT_USER'", "'DATA'",
+				"'DATABASE'", null, "'DAY'", "'DBPROPERTIES'", "'DEFINED'", "'DELETE'",
+				"'DELIMITED'", null, "'DESCRIBE'", "'DFS'", "'DIRECTORIES'", "'DIRECTORY'",
+				null, "'DISTRIBUTE'", "'DIV'", "'DROP'", "'ELSE'", null, "'ESCAPE'",
+				"'ESCAPED'", "'EXCEPT'", "'EXCHANGE'", null, "'EXPLAIN'", "'EXPORT'",
+				"'EXTENDED'", "'EXTERNAL'", "'EXTRACT'", "'FALSE'", "'FETCH'", "'FIELDS'",
+				"'FILTER'", "'FILEFORMAT'", "'FIRST'", "'FOLLOWING'", "'FOR'", "'FOREIGN'",
+				"'FORMAT'", "'FORMATTED'", null, "'FULL'", "'FUNCTION'", "'FUNCTIONS'",
+				"'GLOBAL'", "'GRANT'", null, null, null, "'HOUR'", null, "'IGNORE'",
+				"'IMPORT'", null, "'INDEX'", "'INDEXES'", null, "'INPATH'", "'INPUTFORMAT'",
+				"'INSERT'", "'INTERSECT'", "'INTERVAL'", "'INTO'", "'IS'", "'ITEMS'",
+				null, "'KEYS'", "'LAST'", "'LATERAL'", "'LAZY'", "'LEADING'", null, null,
+				"'LIMIT'", "'LINES'", "'LIST'", "'LOAD'", "'LOCAL'", "'LOCATION'", null,
+				"'LOCKS'", "'LOGICAL'", "'MACRO'", "'MAP'", "'MATCHED'", "'MERGE'", "'MINUTE'",
+				"'MONTH'", "'MSCK'", "'NAMESPACE'", "'NAMESPACES'", "'NATURAL'", "'NO'",
+				null, "'NULL'", "'NULLS'", "'OF'", null, "'ONLY'", "'OPTION'", "'OPTIONS'",
+				null, null, "'OUT'", "'OUTER'", "'OUTPUTFORMAT'", "'OVER'", "'OVERLAPS'",
+				"'OVERLAY'", "'OVERWRITE'", "'PARTITION'", "'PARTITIONED'", "'PARTITIONS'",
+				"'PERCENT'", "'PIVOT'", "'PLACING'", "'POSITION'", "'PRECEDING'", "'PRIMARY'",
+				"'PRINCIPALS'", "'PROPERTIES'", "'PURGE'", "'QUERY'", "'RANGE'", "'RECORDREADER'",
+				"'RECORDWRITER'", "'RECOVER'", "'REDUCE'", "'REFERENCES'", "'REFRESH'",
+				"'RENAME'", "'REPAIR'", "'REPLACE'", "'RESET'", "'RESTRICT'", "'REVOKE'",
+				"'RIGHT'", null, "'ROLE'", "'ROLES'", "'ROLLBACK'", "'ROLLUP'", "'ROW'",
+				"'ROWS'", "'SCHEMA'", "'SECOND'", null, "'SEMI'", "'SEPARATED'", "'SERDE'",
+				"'SERDEPROPERTIES'", "'SESSION_USER'", "'SET'", "'MINUS'", "'SETS'",
+				"'SHOW'", "'SKEWED'", "'SOME'", "'SORT'", "'SORTED'", "'START'", "'STATISTICS'",
+				"'STORED'", "'STRATIFY'", "'STRUCT'", "'SUBSTR'", "'SUBSTRING'", null,
+				"'TABLES'", "'TABLESAMPLE'", "'TBLPROPERTIES'", null, "'TERMINATED'",
+				"'THEN'", "'TIME'", "'TO'", "'TOUCH'", "'TRAILING'", "'TRANSACTION'",
+				"'TRANSACTIONS'", "'TRANSFORM'", "'TRIM'", "'TRUE'", "'TRUNCATE'", "'TYPE'",
+				"'UNARCHIVE'", "'UNBOUNDED'", "'UNCACHE'", "'UNION'", "'UNIQUE'", "'UNKNOWN'",
+				"'UNLOCK'", "'UNSET'", "'UPDATE'", "'USE'", "'USER'", "'USING'", "'VALUES'",
+				"'VIEW'", "'VIEWS'", null, null, "'WINDOW'", "'WITH'", "'YEAR'", "'ZONE'",
+				null, "'<=>'", "'<>'", "'!='", "'<'", null, "'>'", null, "'+'", "'-'",
+				"'*'", "'/'", "'%'", "'~'", "'&'", "'|'", "'||'", "'^'"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();

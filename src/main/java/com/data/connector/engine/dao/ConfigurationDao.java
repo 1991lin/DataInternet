@@ -6,6 +6,15 @@ package com.data.connector.engine.dao;
  **/
 public interface ConfigurationDao {
 
+
+    /**
+     * get configuration DSL from database
+     *
+     * @return
+     */
     String getConfigurationDsl();
+
+
+    String getConfigurationParametersJson();
 
 }

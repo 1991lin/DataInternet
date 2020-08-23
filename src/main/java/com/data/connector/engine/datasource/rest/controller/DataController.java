@@ -17,7 +17,8 @@ import java.util.List;
  **/
 
 @Slf4j
-@RestController(value = "/data")
+@RestController
+@RequestMapping(value = "/data")
 public class DataController {
 
     @RequestMapping(value = "/list/userInfo", method = RequestMethod.GET)

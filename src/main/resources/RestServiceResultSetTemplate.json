@@ -1,0 +1,31 @@
+{
+  "result": {
+    "columnName": [
+      "name",
+      "age",
+      "city"
+    ],
+    "columnType": [
+      "String",
+      "Integer",
+      "String"
+    ],
+    "dataset": [
+      [
+        "A",
+        28,
+        "qingdao"
+      ],
+      [
+        "B",
+        37,
+        "wuhang"
+      ],
+      [
+        "C",
+        43,
+        "jinan"
+      ]
+    ]
+  }
+}
