@@ -1,6 +1,7 @@
 package com.data.connector.engine.sql;
 
 import com.data.connector.engine.sql.impl.SqlVisitor;
+import com.google.gson.JsonArray;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,13 @@ public class SqlExtractTool {
 
         SqlExtractTool sqlExtractTool = new SqlExtractTool(configuredDataCenter);
         log.info(sqlExtractTool.getDataSource().toString());
+
+
+        JsonArray jsonArray = new JsonArray();
+        jsonArray.add("dd");
+        jsonArray.add("cc");
+        System.out.println(jsonArray.toString());
+
     }
 
     public Map<String, Set<String>> getDataSource() {

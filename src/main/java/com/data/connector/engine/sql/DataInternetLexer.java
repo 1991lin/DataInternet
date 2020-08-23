@@ -41,42 +41,47 @@ public class DataInternetLexer extends Lexer {
 		MAP=144, MATCHED=145, MERGE=146, MINUTE=147, MONTH=148, MSCK=149, NAMESPACE=150, 
 		NAMESPACES=151, NATURAL=152, NO=153, NOT=154, NULL=155, NULLS=156, OF=157, 
 		ON=158, ONLY=159, OPTION=160, OPTIONS=161, OR=162, ORDER=163, OUT=164, 
-		OUTER=165, OUTPUTFORMAT=166, OVER=167, OVERLAPS=168, OVERLAY=169, OVERWRITE=170, 
-		PARTITION=171, PARTITIONED=172, PARTITIONS=173, PERCENTLIT=174, PIVOT=175, 
-		PLACING=176, POSITION=177, PRECEDING=178, PRIMARY=179, PRINCIPALS=180, 
-		PROPERTIES=181, PURGE=182, QUERY=183, RANGE=184, RECORDREADER=185, RECORDWRITER=186, 
-		RECOVER=187, REDUCE=188, REFERENCES=189, REFRESH=190, RENAME=191, REPAIR=192, 
-		REPLACE=193, RESET=194, RESTRICT=195, REVOKE=196, RIGHT=197, RLIKE=198, 
-		ROLE=199, ROLES=200, ROLLBACK=201, ROLLUP=202, ROW=203, ROWS=204, SCHEMA=205, 
-		SECOND=206, SELECT=207, SEMI=208, SEPARATED=209, SERDE=210, SERDEPROPERTIES=211, 
-		SESSION_USER=212, SET=213, SETMINUS=214, SETS=215, SHOW=216, SKEWED=217, 
-		SOME=218, SORT=219, SORTED=220, START=221, STATISTICS=222, STORED=223, 
-		STRATIFY=224, STRUCT=225, SUBSTR=226, SUBSTRING=227, TABLE=228, TABLES=229, 
-		TABLESAMPLE=230, TBLPROPERTIES=231, TEMPORARY=232, TERMINATED=233, THEN=234, 
-		TIME=235, TO=236, TOUCH=237, TRAILING=238, TRANSACTION=239, TRANSACTIONS=240, 
-		TRANSFORM=241, TRIM=242, TRUE=243, TRUNCATE=244, TYPE=245, UNARCHIVE=246, 
-		UNBOUNDED=247, UNCACHE=248, UNION=249, UNIQUE=250, UNKNOWN=251, UNLOCK=252, 
-		UNSET=253, UPDATE=254, USE=255, USER=256, USING=257, VALUES=258, VIEW=259, 
-		VIEWS=260, WHEN=261, WHERE=262, WINDOW=263, WITH=264, YEAR=265, ZONE=266, 
-		EQ=267, NSEQ=268, NEQ=269, NEQJ=270, LT=271, LTE=272, GT=273, GTE=274, 
-		PLUS=275, MINUS=276, ASTERISK=277, SLASH=278, PERCENT=279, TILDE=280, 
-		AMPERSAND=281, PIPE=282, CONCAT_PIPE=283, HAT=284, STRING=285, BIGINT_LITERAL=286, 
-		SMALLINT_LITERAL=287, TINYINT_LITERAL=288, INTEGER_VALUE=289, EXPONENT_VALUE=290, 
-		DECIMAL_VALUE=291, FLOAT_LITERAL=292, DOUBLE_LITERAL=293, BIGDECIMAL_LITERAL=294,
+		OUTER=165, OUTPUTFORMAT=166, OVER=167, OVERLAPS=168, OVERLAY=169, OVERWRITE=170,
+			PARTITION = 171, PARTITIONED = 172, PARTITIONS = 173, PERCENTLIT = 174, PIVOT = 175,
+			PLACING = 176, POSITION = 177, PRECEDING = 178, PRIMARY = 179, PRINCIPALS = 180,
+			PROPERTIES = 181, PURGE = 182, QUERY = 183, RANGE = 184, RECORDREADER = 185, RECORDWRITER = 186,
+			RECOVER = 187, REDUCE = 188, REFERENCES = 189, REFRESH = 190, RENAME = 191, REPAIR = 192,
+			REPLACE = 193, RESET = 194, RESTRICT = 195, REVOKE = 196, RIGHT = 197, RLIKE = 198,
+			ROLE = 199, ROLES = 200, ROLLBACK = 201, ROLLUP = 202, ROW = 203, ROWS = 204, SCHEMA = 205,
+			SECOND = 206, SELECT = 207, SEMI = 208, SEPARATED = 209, SERDE = 210, SERDEPROPERTIES = 211,
+			SESSION_USER = 212, SET = 213, SETMINUS = 214, SETS = 215, SHOW = 216, SKEWED = 217,
+			SOME = 218, SORT = 219, SORTED = 220, START = 221, STATISTICS = 222, STORED = 223,
+			STRATIFY = 224, STRUCT = 225, SUBSTR = 226, SUBSTRING = 227, TABLE = 228, TABLES = 229,
+			TABLESAMPLE = 230, TBLPROPERTIES = 231, TEMPORARY = 232, TERMINATED = 233, THEN = 234,
+			TIME = 235, TO = 236, TOUCH = 237, TRAILING = 238, TRANSACTION = 239, TRANSACTIONS = 240,
+			TRANSFORM = 241, TRIM = 242, TRUE = 243, TRUNCATE = 244, TYPE = 245, UNARCHIVE = 246,
+			UNBOUNDED = 247, UNCACHE = 248, UNION = 249, UNIQUE = 250, UNKNOWN = 251, UNLOCK = 252,
+			UNSET = 253, UPDATE = 254, USE = 255, USER = 256, USING = 257, VALUES = 258, VIEW = 259,
+			VIEWS = 260, WHEN = 261, WHERE = 262, WINDOW = 263, WITH = 264, YEAR = 265, ZONE = 266,
+			EQ = 267, NSEQ = 268, NEQ = 269, NEQJ = 270, LT = 271, LTE = 272, GT = 273, GTE = 274,
+			PLUS = 275, MINUS = 276, ASTERISK = 277, SLASH = 278, PERCENT = 279, TILDE = 280,
+			AMPERSAND = 281, PIPE = 282, CONCAT_PIPE = 283, HAT = 284, STRING = 285, BIGINT_LITERAL = 286,
+			SMALLINT_LITERAL = 287, TINYINT_LITERAL = 288, INTEGER_VALUE = 289, EXPONENT_VALUE = 290,
+			DECIMAL_VALUE = 291, FLOAT_LITERAL = 292, DOUBLE_LITERAL = 293, BIGDECIMAL_LITERAL = 294,
 			IDENTIFIER = 295, BACKQUOTED_IDENTIFIER = 296, SIMPLE_COMMENT = 297, BRACKETED_COMMENT = 298,
 			WS = 299, UNRECOGNIZED = 300;
-	public static String[] channelNames = {
-			"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
-	};
-
-	public static String[] modeNames = {
-			"DEFAULT_MODE"
-	};
-
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
+	public static final String _serializedATN = Utils.join(
+			new String[]{
+					_serializedATNSegment0,
+					_serializedATNSegment1
+			},
+			""
+	);
 	public static final ATN _ATN =
 			new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 
 	public static final String[] ruleNames = makeRuleNames();
+
 	private static final String _serializedATNSegment0 =
 			"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\2\u012e\u0b7c\b\1\4" +
 					"\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n" +
@@ -1049,6 +1054,262 @@ public class DataInternetLexer extends Lexer {
 					"\3\2\2\2\u09c7\u09c8\7V\2\2\u09c8\u09c9\7T\2\2\u09c9\u09ca\7W\2\2\u09ca" +
 					"\u09cb\7G\2\2\u09cb\u01e8\3\2\2\2\u09cc\u09cd\7V\2\2";
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+	private static final int _serializedATNSegments = 2;
+	public static String[] channelNames = {
+			"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
+	};
+	public static String[] modeNames = {
+			"DEFAULT_MODE"
+	};
+
+	static {
+		tokenNames = new String[_SYMBOLIC_NAMES.length];
+		for (int i = 0; i < tokenNames.length; i++) {
+			tokenNames[i] = VOCABULARY.getLiteralName(i);
+			if (tokenNames[i] == null) {
+				tokenNames[i] = VOCABULARY.getSymbolicName(i);
+			}
+
+			if (tokenNames[i] == null) {
+				tokenNames[i] = "<INVALID>";
+			}
+		}
+	}
+
+	public DataInternetLexer(CharStream input) {
+		super(input);
+		_interp = new LexerATNSimulator(this, _ATN, _decisionToDFA, _sharedContextCache);
+	}
+
+	private static String[] makeRuleNames() {
+		return new String[]{
+				"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8",
+				"T__9", "T__10", "ADD", "AFTER", "ALL", "ALTER", "ANALYZE", "AND", "ANTI",
+				"ANY", "ARCHIVE", "ARRAY", "AS", "ASC", "AT", "AUTHORIZATION", "BETWEEN",
+				"BOTH", "BUCKET", "BUCKETS", "BY", "CACHE", "CASCADE", "CASE", "CAST",
+				"CHANGE", "CHECK", "CLEAR", "CLUSTER", "CLUSTERED", "CODEGEN", "COLLATE",
+				"COLLECTION", "COLUMN", "COLUMNS", "COMMENT", "COMMIT", "COMPACT", "COMPACTIONS",
+				"COMPUTE", "CONCATENATE", "CONSTRAINT", "COST", "CREATE", "CROSS", "CUBE",
+				"CURRENT", "CURRENT_DATE", "CURRENT_TIME", "CURRENT_TIMESTAMP", "CURRENT_USER",
+				"DATA", "DATABASE", "DATABASES", "DAY", "DBPROPERTIES", "DEFINED", "DELETE",
+				"DELIMITED", "DESC", "DESCRIBE", "DFS", "DIRECTORIES", "DIRECTORY", "DISTINCT",
+				"DISTRIBUTE", "DIV", "DROP", "ELSE", "END", "ESCAPE", "ESCAPED", "EXCEPT",
+				"EXCHANGE", "EXISTS", "EXPLAIN", "EXPORT", "EXTENDED", "EXTERNAL", "EXTRACT",
+				"FALSE", "FETCH", "FIELDS", "FILTER", "FILEFORMAT", "FIRST", "FOLLOWING",
+				"FOR", "FOREIGN", "FORMAT", "FORMATTED", "FROM", "FULL", "FUNCTION",
+				"FUNCTIONS", "GLOBAL", "GRANT", "GROUP", "GROUPING", "HAVING", "HOUR",
+				"IF", "IGNORE", "IMPORT", "IN", "INDEX", "INDEXES", "INNER", "INPATH",
+				"INPUTFORMAT", "INSERT", "INTERSECT", "INTERVAL", "INTO", "IS", "ITEMS",
+				"JOIN", "KEYS", "LAST", "LATERAL", "LAZY", "LEADING", "LEFT", "LIKE",
+				"LIMIT", "LINES", "LIST", "LOAD", "LOCAL", "LOCATION", "LOCK", "LOCKS",
+				"LOGICAL", "MACRO", "MAP", "MATCHED", "MERGE", "MINUTE", "MONTH", "MSCK",
+				"NAMESPACE", "NAMESPACES", "NATURAL", "NO", "NOT", "NULL", "NULLS", "OF",
+				"ON", "ONLY", "OPTION", "OPTIONS", "OR", "ORDER", "OUT", "OUTER", "OUTPUTFORMAT",
+				"OVER", "OVERLAPS", "OVERLAY", "OVERWRITE", "PARTITION", "PARTITIONED",
+				"PARTITIONS", "PERCENTLIT", "PIVOT", "PLACING", "POSITION", "PRECEDING",
+				"PRIMARY", "PRINCIPALS", "PROPERTIES", "PURGE", "QUERY", "RANGE", "RECORDREADER",
+				"RECORDWRITER", "RECOVER", "REDUCE", "REFERENCES", "REFRESH", "RENAME",
+				"REPAIR", "REPLACE", "RESET", "RESTRICT", "REVOKE", "RIGHT", "RLIKE",
+				"ROLE", "ROLES", "ROLLBACK", "ROLLUP", "ROW", "ROWS", "SCHEMA", "SECOND",
+				"SELECT", "SEMI", "SEPARATED", "SERDE", "SERDEPROPERTIES", "SESSION_USER",
+				"SET", "SETMINUS", "SETS", "SHOW", "SKEWED", "SOME", "SORT", "SORTED",
+				"START", "STATISTICS", "STORED", "STRATIFY", "STRUCT", "SUBSTR", "SUBSTRING",
+				"TABLE", "TABLES", "TABLESAMPLE", "TBLPROPERTIES", "TEMPORARY", "TERMINATED",
+				"THEN", "TIME", "TO", "TOUCH", "TRAILING", "TRANSACTION", "TRANSACTIONS",
+				"TRANSFORM", "TRIM", "TRUE", "TRUNCATE", "TYPE", "UNARCHIVE", "UNBOUNDED",
+				"UNCACHE", "UNION", "UNIQUE", "UNKNOWN", "UNLOCK", "UNSET", "UPDATE",
+				"USE", "USER", "USING", "VALUES", "VIEW", "VIEWS", "WHEN", "WHERE", "WINDOW",
+				"WITH", "YEAR", "ZONE", "EQ", "NSEQ", "NEQ", "NEQJ", "LT", "LTE", "GT",
+				"GTE", "PLUS", "MINUS", "ASTERISK", "SLASH", "PERCENT", "TILDE", "AMPERSAND",
+				"PIPE", "CONCAT_PIPE", "HAT", "STRING", "BIGINT_LITERAL", "SMALLINT_LITERAL",
+				"TINYINT_LITERAL", "INTEGER_VALUE", "EXPONENT_VALUE", "DECIMAL_VALUE",
+				"FLOAT_LITERAL", "DOUBLE_LITERAL", "BIGDECIMAL_LITERAL", "IDENTIFIER",
+				"BACKQUOTED_IDENTIFIER", "DECIMAL_DIGITS", "EXPONENT", "DIGIT", "LETTER",
+				"SIMPLE_COMMENT", "BRACKETED_COMMENT", "WS", "UNRECOGNIZED"
+		};
+	}
+
+	private static String[] makeSymbolicNames() {
+		return new String[]{
+				null, null, null, null, null, null, null, null, null, null, null, null,
+				"ADD", "AFTER", "ALL", "ALTER", "ANALYZE", "AND", "ANTI", "ANY", "ARCHIVE",
+				"ARRAY", "AS", "ASC", "AT", "AUTHORIZATION", "BETWEEN", "BOTH", "BUCKET",
+				"BUCKETS", "BY", "CACHE", "CASCADE", "CASE", "CAST", "CHANGE", "CHECK",
+				"CLEAR", "CLUSTER", "CLUSTERED", "CODEGEN", "COLLATE", "COLLECTION",
+				"COLUMN", "COLUMNS", "COMMENT", "COMMIT", "COMPACT", "COMPACTIONS", "COMPUTE",
+				"CONCATENATE", "CONSTRAINT", "COST", "CREATE", "CROSS", "CUBE", "CURRENT",
+				"CURRENT_DATE", "CURRENT_TIME", "CURRENT_TIMESTAMP", "CURRENT_USER",
+				"DATA", "DATABASE", "DATABASES", "DAY", "DBPROPERTIES", "DEFINED", "DELETE",
+				"DELIMITED", "DESC", "DESCRIBE", "DFS", "DIRECTORIES", "DIRECTORY", "DISTINCT",
+				"DISTRIBUTE", "DIV", "DROP", "ELSE", "END", "ESCAPE", "ESCAPED", "EXCEPT",
+				"EXCHANGE", "EXISTS", "EXPLAIN", "EXPORT", "EXTENDED", "EXTERNAL", "EXTRACT",
+				"FALSE", "FETCH", "FIELDS", "FILTER", "FILEFORMAT", "FIRST", "FOLLOWING",
+				"FOR", "FOREIGN", "FORMAT", "FORMATTED", "FROM", "FULL", "FUNCTION",
+				"FUNCTIONS", "GLOBAL", "GRANT", "GROUP", "GROUPING", "HAVING", "HOUR",
+				"IF", "IGNORE", "IMPORT", "IN", "INDEX", "INDEXES", "INNER", "INPATH",
+				"INPUTFORMAT", "INSERT", "INTERSECT", "INTERVAL", "INTO", "IS", "ITEMS",
+				"JOIN", "KEYS", "LAST", "LATERAL", "LAZY", "LEADING", "LEFT", "LIKE",
+				"LIMIT", "LINES", "LIST", "LOAD", "LOCAL", "LOCATION", "LOCK", "LOCKS",
+				"LOGICAL", "MACRO", "MAP", "MATCHED", "MERGE", "MINUTE", "MONTH", "MSCK",
+				"NAMESPACE", "NAMESPACES", "NATURAL", "NO", "NOT", "NULL", "NULLS", "OF",
+				"ON", "ONLY", "OPTION", "OPTIONS", "OR", "ORDER", "OUT", "OUTER", "OUTPUTFORMAT",
+				"OVER", "OVERLAPS", "OVERLAY", "OVERWRITE", "PARTITION", "PARTITIONED",
+				"PARTITIONS", "PERCENTLIT", "PIVOT", "PLACING", "POSITION", "PRECEDING",
+				"PRIMARY", "PRINCIPALS", "PROPERTIES", "PURGE", "QUERY", "RANGE", "RECORDREADER",
+				"RECORDWRITER", "RECOVER", "REDUCE", "REFERENCES", "REFRESH", "RENAME",
+				"REPAIR", "REPLACE", "RESET", "RESTRICT", "REVOKE", "RIGHT", "RLIKE",
+				"ROLE", "ROLES", "ROLLBACK", "ROLLUP", "ROW", "ROWS", "SCHEMA", "SECOND",
+				"SELECT", "SEMI", "SEPARATED", "SERDE", "SERDEPROPERTIES", "SESSION_USER",
+				"SET", "SETMINUS", "SETS", "SHOW", "SKEWED", "SOME", "SORT", "SORTED",
+				"START", "STATISTICS", "STORED", "STRATIFY", "STRUCT", "SUBSTR", "SUBSTRING",
+				"TABLE", "TABLES", "TABLESAMPLE", "TBLPROPERTIES", "TEMPORARY", "TERMINATED",
+				"THEN", "TIME", "TO", "TOUCH", "TRAILING", "TRANSACTION", "TRANSACTIONS",
+				"TRANSFORM", "TRIM", "TRUE", "TRUNCATE", "TYPE", "UNARCHIVE", "UNBOUNDED",
+				"UNCACHE", "UNION", "UNIQUE", "UNKNOWN", "UNLOCK", "UNSET", "UPDATE",
+				"USE", "USER", "USING", "VALUES", "VIEW", "VIEWS", "WHEN", "WHERE", "WINDOW",
+				"WITH", "YEAR", "ZONE", "EQ", "NSEQ", "NEQ", "NEQJ", "LT", "LTE", "GT",
+				"GTE", "PLUS", "MINUS", "ASTERISK", "SLASH", "PERCENT", "TILDE", "AMPERSAND",
+				"PIPE", "CONCAT_PIPE", "HAT", "STRING", "BIGINT_LITERAL", "SMALLINT_LITERAL",
+				"TINYINT_LITERAL", "INTEGER_VALUE", "EXPONENT_VALUE", "DECIMAL_VALUE",
+				"FLOAT_LITERAL", "DOUBLE_LITERAL", "BIGDECIMAL_LITERAL", "IDENTIFIER",
+				"BACKQUOTED_IDENTIFIER", "SIMPLE_COMMENT", "BRACKETED_COMMENT", "WS",
+				"UNRECOGNIZED"
+		};
+	}
+
+	@Override
+	@Deprecated
+	public String[] getTokenNames() {
+		return tokenNames;
+	}
+
+	@Override
+
+	public Vocabulary getVocabulary() {
+		return VOCABULARY;
+	}
+
+	/**
+	 * Verify whether current token is a valid decimal token (which contains dot).
+	 * Returns true if the character that follows the token is not a digit or letter or underscore.
+	 * <p>
+	 * For example:
+	 * For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
+	 * For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
+	 * For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
+	 * For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
+	 * by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
+	 * which is not a digit or letter or underscore.
+	 */
+	public boolean isValidDecimal() {
+		int nextChar = _input.LA(1);
+		if (nextChar >= 'A' && nextChar <= 'Z' || nextChar >= '0' && nextChar <= '9' ||
+				nextChar == '_') {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	/**
+	 * This method will be called when we see '/*' and try to match it as a bracketed comment.
+	 * If the next character is '+', it should be parsed as hint later, and we cannot match
+	 * it as a bracketed comment.
+	 * <p>
+	 * Returns true if the next character is '+'.
+	 */
+	public boolean isHint() {
+		int nextChar = _input.LA(1);
+		if (nextChar == '+') {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	@Override
+	public String getGrammarFileName() {
+		return "DataInternet.g4";
+	}
+
+	@Override
+	public String[] getRuleNames() {
+		return ruleNames;
+	}
+
+	@Override
+	public String getSerializedATN() {
+		return _serializedATN;
+	}
+
+	@Override
+	public String[] getChannelNames() {
+		return channelNames;
+	}
+
+	@Override
+	public String[] getModeNames() {
+		return modeNames;
+	}
+
+	@Override
+	public ATN getATN() {
+		return _ATN;
+	}
+
+	@Override
+	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
+		switch (ruleIndex) {
+			case 289:
+				return EXPONENT_VALUE_sempred((RuleContext) _localctx, predIndex);
+			case 290:
+				return DECIMAL_VALUE_sempred((RuleContext) _localctx, predIndex);
+			case 291:
+				return FLOAT_LITERAL_sempred((RuleContext) _localctx, predIndex);
+			case 292:
+				return DOUBLE_LITERAL_sempred((RuleContext) _localctx, predIndex);
+			case 293:
+				return BIGDECIMAL_LITERAL_sempred((RuleContext) _localctx, predIndex);
+			case 301:
+				return BRACKETED_COMMENT_sempred((RuleContext) _localctx, predIndex);
+		}
+		return true;
+	}
+
+	private boolean EXPONENT_VALUE_sempred(RuleContext _localctx, int predIndex) {
+		switch (predIndex) {
+			case 0:
+				return isValidDecimal();
+		}
+		return true;
+	}
+
+	private boolean DECIMAL_VALUE_sempred(RuleContext _localctx, int predIndex) {
+		switch (predIndex) {
+			case 1:
+				return isValidDecimal();
+		}
+		return true;
+	}
+
+	private boolean FLOAT_LITERAL_sempred(RuleContext _localctx, int predIndex) {
+		switch (predIndex) {
+			case 2:
+				return isValidDecimal();
+		}
+		return true;
+	}
+
+	private boolean DOUBLE_LITERAL_sempred(RuleContext _localctx, int predIndex) {
+		switch (predIndex) {
+			case 3:
+				return isValidDecimal();
+		}
+		return true;
+	}
+
 	private static final String _serializedATNSegment1 =
 			"\u09cd\u09ce\7T\2\2\u09ce\u09cf\7W\2\2\u09cf\u09d0\7P\2\2\u09d0\u09d1" +
 					"\7E\2\2\u09d1\u09d2\7C\2\2\u09d2\u09d3\7V\2\2\u09d3\u09d4\7G\2\2\u09d4" +
@@ -1192,264 +1453,6 @@ public class DataInternetLexer extends Lexer {
 					"\u0ac7\u0ace\u0ad3\u0adb\u0ae3\u0ae6\u0aec\u0af1\u0af6\u0af9\u0aff\u0b04" +
 					"\u0b09\u0b0c\u0b13\u0b1a\u0b1f\u0b21\u0b27\u0b29\u0b31\u0b37\u0b3e\u0b40" +
 					"\u0b44\u0b49\u0b4e\u0b56\u0b58\u0b5c\u0b5f\u0b69\u0b6b\u0b76\3\2\3\2";
-	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
-	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	@Deprecated
-	public static final String[] tokenNames;
-
-	static {
-		tokenNames = new String[_SYMBOLIC_NAMES.length];
-		for (int i = 0; i < tokenNames.length; i++) {
-			tokenNames[i] = VOCABULARY.getLiteralName(i);
-			if (tokenNames[i] == null) {
-				tokenNames[i] = VOCABULARY.getSymbolicName(i);
-			}
-
-			if (tokenNames[i] == null) {
-				tokenNames[i] = "<INVALID>";
-			}
-		}
-	}
-
-	@Override
-	@Deprecated
-	public String[] getTokenNames() {
-		return tokenNames;
-	}
-
-	@Override
-
-	public Vocabulary getVocabulary() {
-		return VOCABULARY;
-	}
-
-
-	  /**
-	   * Verify whether current token is a valid decimal token (which contains dot).
-	   * Returns true if the character that follows the token is not a digit or letter or underscore.
-	   *
-	   * For example:
-	   * For char stream "2.3", "2." is not a valid decimal token, because it is followed by digit '3'.
-	   * For char stream "2.3_", "2.3" is not a valid decimal token, because it is followed by '_'.
-	   * For char stream "2.3W", "2.3" is not a valid decimal token, because it is followed by 'W'.
-	   * For char stream "12.0D 34.E2+0.12 "  12.0D is a valid decimal token because it is followed
-	   * by a space. 34.E2 is a valid decimal token because it is followed by symbol '+'
-	   * which is not a digit or letter or underscore.
-	   */
-	  public boolean isValidDecimal() {
-	    int nextChar = _input.LA(1);
-	    if (nextChar >= 'A' && nextChar <= 'Z' || nextChar >= '0' && nextChar <= '9' ||
-	      nextChar == '_') {
-	      return false;
-	    } else {
-	      return true;
-	    }
-	  }
-
-	  /**
-	   * This method will be called when we see '/*' and try to match it as a bracketed comment.
-	   * If the next character is '+', it should be parsed as hint later, and we cannot match
-	   * it as a bracketed comment.
-	   *
-	   * Returns true if the next character is '+'.
-	   */
-	  public boolean isHint() {
-	    int nextChar = _input.LA(1);
-	    if (nextChar == '+') {
-	      return true;
-	    } else {
-	      return false;
-	    }
-	  }
-
-
-	public DataInternetLexer(CharStream input) {
-		super(input);
-		_interp = new LexerATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
-	}
-
-	@Override
-	public String getGrammarFileName() { return "DataInternet.g4"; }
-
-	@Override
-	public String[] getRuleNames() { return ruleNames; }
-
-	@Override
-	public String getSerializedATN() { return _serializedATN; }
-
-	@Override
-	public String[] getChannelNames() { return channelNames; }
-
-	@Override
-	public String[] getModeNames() { return modeNames; }
-
-	@Override
-	public ATN getATN() { return _ATN; }
-
-	@Override
-	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
-		switch (ruleIndex) {
-		case 289:
-			return EXPONENT_VALUE_sempred((RuleContext)_localctx, predIndex);
-		case 290:
-			return DECIMAL_VALUE_sempred((RuleContext)_localctx, predIndex);
-		case 291:
-			return FLOAT_LITERAL_sempred((RuleContext)_localctx, predIndex);
-		case 292:
-			return DOUBLE_LITERAL_sempred((RuleContext)_localctx, predIndex);
-		case 293:
-			return BIGDECIMAL_LITERAL_sempred((RuleContext)_localctx, predIndex);
-		case 301:
-			return BRACKETED_COMMENT_sempred((RuleContext)_localctx, predIndex);
-		}
-		return true;
-	}
-	private boolean EXPONENT_VALUE_sempred(RuleContext _localctx, int predIndex) {
-		switch (predIndex) {
-		case 0:
-			return isValidDecimal();
-		}
-		return true;
-	}
-	private boolean DECIMAL_VALUE_sempred(RuleContext _localctx, int predIndex) {
-		switch (predIndex) {
-		case 1:
-			return isValidDecimal();
-		}
-		return true;
-	}
-	private boolean FLOAT_LITERAL_sempred(RuleContext _localctx, int predIndex) {
-		switch (predIndex) {
-		case 2:
-			return isValidDecimal();
-		}
-		return true;
-	}
-	private boolean DOUBLE_LITERAL_sempred(RuleContext _localctx, int predIndex) {
-		switch (predIndex) {
-		case 3:
-			return isValidDecimal();
-		}
-		return true;
-	}
-
-	private boolean BIGDECIMAL_LITERAL_sempred(RuleContext _localctx, int predIndex) {
-		switch (predIndex) {
-			case 4:
-				return isValidDecimal();
-		}
-		return true;
-	}
-
-	public static final String _serializedATN = Utils.join(
-			new String[]{
-					_serializedATNSegment0,
-					_serializedATNSegment1
-			},
-			""
-	);
-
-	private static final int _serializedATNSegments = 2;
-
-	private static String[] makeRuleNames() {
-		return new String[]{
-				"T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8",
-				"T__9", "T__10", "ADD", "AFTER", "ALL", "ALTER", "ANALYZE", "AND", "ANTI",
-				"ANY", "ARCHIVE", "ARRAY", "AS", "ASC", "AT", "AUTHORIZATION", "BETWEEN",
-				"BOTH", "BUCKET", "BUCKETS", "BY", "CACHE", "CASCADE", "CASE", "CAST",
-				"CHANGE", "CHECK", "CLEAR", "CLUSTER", "CLUSTERED", "CODEGEN", "COLLATE",
-				"COLLECTION", "COLUMN", "COLUMNS", "COMMENT", "COMMIT", "COMPACT", "COMPACTIONS",
-				"COMPUTE", "CONCATENATE", "CONSTRAINT", "COST", "CREATE", "CROSS", "CUBE",
-				"CURRENT", "CURRENT_DATE", "CURRENT_TIME", "CURRENT_TIMESTAMP", "CURRENT_USER",
-				"DATA", "DATABASE", "DATABASES", "DAY", "DBPROPERTIES", "DEFINED", "DELETE",
-				"DELIMITED", "DESC", "DESCRIBE", "DFS", "DIRECTORIES", "DIRECTORY", "DISTINCT",
-				"DISTRIBUTE", "DIV", "DROP", "ELSE", "END", "ESCAPE", "ESCAPED", "EXCEPT",
-				"EXCHANGE", "EXISTS", "EXPLAIN", "EXPORT", "EXTENDED", "EXTERNAL", "EXTRACT",
-				"FALSE", "FETCH", "FIELDS", "FILTER", "FILEFORMAT", "FIRST", "FOLLOWING",
-				"FOR", "FOREIGN", "FORMAT", "FORMATTED", "FROM", "FULL", "FUNCTION",
-				"FUNCTIONS", "GLOBAL", "GRANT", "GROUP", "GROUPING", "HAVING", "HOUR",
-				"IF", "IGNORE", "IMPORT", "IN", "INDEX", "INDEXES", "INNER", "INPATH",
-				"INPUTFORMAT", "INSERT", "INTERSECT", "INTERVAL", "INTO", "IS", "ITEMS",
-				"JOIN", "KEYS", "LAST", "LATERAL", "LAZY", "LEADING", "LEFT", "LIKE",
-				"LIMIT", "LINES", "LIST", "LOAD", "LOCAL", "LOCATION", "LOCK", "LOCKS",
-				"LOGICAL", "MACRO", "MAP", "MATCHED", "MERGE", "MINUTE", "MONTH", "MSCK",
-				"NAMESPACE", "NAMESPACES", "NATURAL", "NO", "NOT", "NULL", "NULLS", "OF",
-				"ON", "ONLY", "OPTION", "OPTIONS", "OR", "ORDER", "OUT", "OUTER", "OUTPUTFORMAT",
-				"OVER", "OVERLAPS", "OVERLAY", "OVERWRITE", "PARTITION", "PARTITIONED",
-				"PARTITIONS", "PERCENTLIT", "PIVOT", "PLACING", "POSITION", "PRECEDING",
-				"PRIMARY", "PRINCIPALS", "PROPERTIES", "PURGE", "QUERY", "RANGE", "RECORDREADER",
-				"RECORDWRITER", "RECOVER", "REDUCE", "REFERENCES", "REFRESH", "RENAME",
-				"REPAIR", "REPLACE", "RESET", "RESTRICT", "REVOKE", "RIGHT", "RLIKE",
-				"ROLE", "ROLES", "ROLLBACK", "ROLLUP", "ROW", "ROWS", "SCHEMA", "SECOND",
-				"SELECT", "SEMI", "SEPARATED", "SERDE", "SERDEPROPERTIES", "SESSION_USER",
-				"SET", "SETMINUS", "SETS", "SHOW", "SKEWED", "SOME", "SORT", "SORTED",
-				"START", "STATISTICS", "STORED", "STRATIFY", "STRUCT", "SUBSTR", "SUBSTRING",
-				"TABLE", "TABLES", "TABLESAMPLE", "TBLPROPERTIES", "TEMPORARY", "TERMINATED",
-				"THEN", "TIME", "TO", "TOUCH", "TRAILING", "TRANSACTION", "TRANSACTIONS",
-				"TRANSFORM", "TRIM", "TRUE", "TRUNCATE", "TYPE", "UNARCHIVE", "UNBOUNDED",
-				"UNCACHE", "UNION", "UNIQUE", "UNKNOWN", "UNLOCK", "UNSET", "UPDATE",
-				"USE", "USER", "USING", "VALUES", "VIEW", "VIEWS", "WHEN", "WHERE", "WINDOW",
-				"WITH", "YEAR", "ZONE", "EQ", "NSEQ", "NEQ", "NEQJ", "LT", "LTE", "GT",
-				"GTE", "PLUS", "MINUS", "ASTERISK", "SLASH", "PERCENT", "TILDE", "AMPERSAND",
-				"PIPE", "CONCAT_PIPE", "HAT", "STRING", "BIGINT_LITERAL", "SMALLINT_LITERAL",
-				"TINYINT_LITERAL", "INTEGER_VALUE", "EXPONENT_VALUE", "DECIMAL_VALUE",
-				"FLOAT_LITERAL", "DOUBLE_LITERAL", "BIGDECIMAL_LITERAL", "IDENTIFIER",
-				"BACKQUOTED_IDENTIFIER", "DECIMAL_DIGITS", "EXPONENT", "DIGIT", "LETTER",
-				"SIMPLE_COMMENT", "BRACKETED_COMMENT", "WS", "UNRECOGNIZED"
-		};
-	}
-
-	private static String[] makeSymbolicNames() {
-		return new String[]{
-				null, null, null, null, null, null, null, null, null, null, null, null,
-				"ADD", "AFTER", "ALL", "ALTER", "ANALYZE", "AND", "ANTI", "ANY", "ARCHIVE",
-				"ARRAY", "AS", "ASC", "AT", "AUTHORIZATION", "BETWEEN", "BOTH", "BUCKET",
-				"BUCKETS", "BY", "CACHE", "CASCADE", "CASE", "CAST", "CHANGE", "CHECK",
-				"CLEAR", "CLUSTER", "CLUSTERED", "CODEGEN", "COLLATE", "COLLECTION",
-				"COLUMN", "COLUMNS", "COMMENT", "COMMIT", "COMPACT", "COMPACTIONS", "COMPUTE",
-				"CONCATENATE", "CONSTRAINT", "COST", "CREATE", "CROSS", "CUBE", "CURRENT",
-				"CURRENT_DATE", "CURRENT_TIME", "CURRENT_TIMESTAMP", "CURRENT_USER",
-				"DATA", "DATABASE", "DATABASES", "DAY", "DBPROPERTIES", "DEFINED", "DELETE",
-				"DELIMITED", "DESC", "DESCRIBE", "DFS", "DIRECTORIES", "DIRECTORY", "DISTINCT",
-				"DISTRIBUTE", "DIV", "DROP", "ELSE", "END", "ESCAPE", "ESCAPED", "EXCEPT",
-				"EXCHANGE", "EXISTS", "EXPLAIN", "EXPORT", "EXTENDED", "EXTERNAL", "EXTRACT",
-				"FALSE", "FETCH", "FIELDS", "FILTER", "FILEFORMAT", "FIRST", "FOLLOWING",
-				"FOR", "FOREIGN", "FORMAT", "FORMATTED", "FROM", "FULL", "FUNCTION",
-				"FUNCTIONS", "GLOBAL", "GRANT", "GROUP", "GROUPING", "HAVING", "HOUR",
-				"IF", "IGNORE", "IMPORT", "IN", "INDEX", "INDEXES", "INNER", "INPATH",
-				"INPUTFORMAT", "INSERT", "INTERSECT", "INTERVAL", "INTO", "IS", "ITEMS",
-				"JOIN", "KEYS", "LAST", "LATERAL", "LAZY", "LEADING", "LEFT", "LIKE",
-				"LIMIT", "LINES", "LIST", "LOAD", "LOCAL", "LOCATION", "LOCK", "LOCKS",
-				"LOGICAL", "MACRO", "MAP", "MATCHED", "MERGE", "MINUTE", "MONTH", "MSCK",
-				"NAMESPACE", "NAMESPACES", "NATURAL", "NO", "NOT", "NULL", "NULLS", "OF",
-				"ON", "ONLY", "OPTION", "OPTIONS", "OR", "ORDER", "OUT", "OUTER", "OUTPUTFORMAT",
-				"OVER", "OVERLAPS", "OVERLAY", "OVERWRITE", "PARTITION", "PARTITIONED",
-				"PARTITIONS", "PERCENTLIT", "PIVOT", "PLACING", "POSITION", "PRECEDING",
-				"PRIMARY", "PRINCIPALS", "PROPERTIES", "PURGE", "QUERY", "RANGE", "RECORDREADER",
-				"RECORDWRITER", "RECOVER", "REDUCE", "REFERENCES", "REFRESH", "RENAME",
-				"REPAIR", "REPLACE", "RESET", "RESTRICT", "REVOKE", "RIGHT", "RLIKE",
-				"ROLE", "ROLES", "ROLLBACK", "ROLLUP", "ROW", "ROWS", "SCHEMA", "SECOND",
-				"SELECT", "SEMI", "SEPARATED", "SERDE", "SERDEPROPERTIES", "SESSION_USER",
-				"SET", "SETMINUS", "SETS", "SHOW", "SKEWED", "SOME", "SORT", "SORTED",
-				"START", "STATISTICS", "STORED", "STRATIFY", "STRUCT", "SUBSTR", "SUBSTRING",
-				"TABLE", "TABLES", "TABLESAMPLE", "TBLPROPERTIES", "TEMPORARY", "TERMINATED",
-				"THEN", "TIME", "TO", "TOUCH", "TRAILING", "TRANSACTION", "TRANSACTIONS",
-				"TRANSFORM", "TRIM", "TRUE", "TRUNCATE", "TYPE", "UNARCHIVE", "UNBOUNDED",
-				"UNCACHE", "UNION", "UNIQUE", "UNKNOWN", "UNLOCK", "UNSET", "UPDATE",
-				"USE", "USER", "USING", "VALUES", "VIEW", "VIEWS", "WHEN", "WHERE", "WINDOW",
-				"WITH", "YEAR", "ZONE", "EQ", "NSEQ", "NEQ", "NEQJ", "LT", "LTE", "GT",
-				"GTE", "PLUS", "MINUS", "ASTERISK", "SLASH", "PERCENT", "TILDE", "AMPERSAND",
-				"PIPE", "CONCAT_PIPE", "HAT", "STRING", "BIGINT_LITERAL", "SMALLINT_LITERAL",
-				"TINYINT_LITERAL", "INTEGER_VALUE", "EXPONENT_VALUE", "DECIMAL_VALUE",
-				"FLOAT_LITERAL", "DOUBLE_LITERAL", "BIGDECIMAL_LITERAL", "IDENTIFIER",
-				"BACKQUOTED_IDENTIFIER", "SIMPLE_COMMENT", "BRACKETED_COMMENT", "WS",
-				"UNRECOGNIZED"
-		};
-	}
 
 	private static String[] makeLiteralNames() {
 		return new String[]{
@@ -1497,6 +1500,14 @@ public class DataInternetLexer extends Lexer {
 				null, "'<=>'", "'<>'", "'!='", "'<'", null, "'>'", null, "'+'", "'-'",
 				"'*'", "'/'", "'%'", "'~'", "'&'", "'|'", "'||'", "'^'"
 		};
+	}
+
+	private boolean BIGDECIMAL_LITERAL_sempred(RuleContext _localctx, int predIndex) {
+		switch (predIndex) {
+			case 4:
+				return isValidDecimal();
+		}
+		return true;
 	}
 
 	private boolean BRACKETED_COMMENT_sempred(RuleContext _localctx, int predIndex) {

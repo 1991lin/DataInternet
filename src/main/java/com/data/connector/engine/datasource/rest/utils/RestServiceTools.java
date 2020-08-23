@@ -9,7 +9,7 @@ public class RestServiceTools {
     private RestServiceTools() {
     }
 
-    public static String getParamterStringForGetMethod(String parametersJsonString) {
+    public static String getParameterStringForGetMethod(String parametersJsonString) {
         return "";
     }
 

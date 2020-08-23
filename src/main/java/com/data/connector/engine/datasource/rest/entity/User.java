@@ -2,7 +2,6 @@ package com.data.connector.engine.datasource.rest.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 /**
  * @author: Eric
@@ -16,4 +15,9 @@ public class User {
     private int age;
     private String city;
 
+
+    @Override
+    public String toString() {
+        return "[" + name + "," + age + "," + city + "]";
+    }
 }
