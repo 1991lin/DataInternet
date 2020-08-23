@@ -1,8 +1,13 @@
 package com.data.connector.engine.datasource.rest.utils;
 
+import com.data.connector.engine.datasource.rest.exception.RestCallFailedException;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Arrays;
 import java.util.List;
@@ -18,6 +23,19 @@ public class RestServiceTools {
 
     private RestServiceTools() {
     }
+
+
+    public static String getRestServiceResponse(String url) throws RestCallFailedException {
+        RestTemplate restTemplate = new RestTemplate();
+        ResponseEntity<String> entity = restTemplate.getForEntity(url, String.class);
+
+        if (HttpStatus.OK.equals(entity.getStatusCode())) {
+            return entity.getBody();
+        } else {
+            throw new RestCallFailedException("Failed to call", url, HttpMethod.GET, null);
+        }
+    }
+
 
     public static String getParameterStringForGetMethod(String parametersJsonString) {
         return "";

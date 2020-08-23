@@ -19,18 +19,18 @@ public class DataInternetLexer extends Lexer {
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
 		T__9=10, T__10=11, ADD=12, AFTER=13, ALL=14, ALTER=15, ANALYZE=16, AND=17, 
-		ANTI=18, ANY=19, ARCHIVE=20, ARRAY=21, AS=22, ASC=23, AT=24, AUTHORIZATION=25, 
-		BETWEEN=26, BOTH=27, BUCKET=28, BUCKETS=29, BY=30, CACHE=31, CASCADE=32, 
-		CASE=33, CAST=34, CHANGE=35, CHECK=36, CLEAR=37, CLUSTER=38, CLUSTERED=39, 
-		CODEGEN=40, COLLATE=41, COLLECTION=42, COLUMN=43, COLUMNS=44, COMMENT=45, 
-		COMMIT=46, COMPACT=47, COMPACTIONS=48, COMPUTE=49, CONCATENATE=50, CONSTRAINT=51, 
-		COST=52, CREATE=53, CROSS=54, CUBE=55, CURRENT=56, CURRENT_DATE=57, CURRENT_TIME=58, 
-		CURRENT_TIMESTAMP=59, CURRENT_USER=60, DATA=61, DATABASE=62, DATABASES=63, 
-		DAY=64, DBPROPERTIES=65, DEFINED=66, DELETE=67, DELIMITED=68, DESC=69, 
-		DESCRIBE=70, DFS=71, DIRECTORIES=72, DIRECTORY=73, DISTINCT=74, DISTRIBUTE=75, 
-		DIV=76, DROP=77, ELSE=78, END=79, ESCAPE=80, ESCAPED=81, EXCEPT=82, EXCHANGE=83, 
-		EXISTS=84, EXPLAIN=85, EXPORT=86, EXTENDED=87, EXTERNAL=88, EXTRACT=89, 
-		FALSE=90, FETCH=91, FIELDS=92, FILTER=93, FILEFORMAT=94, FIRST=95, FOLLOWING=96,
+		ANTI=18, ANY=19, ARCHIVE=20, ARRAY=21, AS=22, ASC=23, AT=24, AUTHORIZATION=25,
+			BETWEEN = 26, BOTH = 27, BUCKET = 28, BUCKETS = 29, BY = 30, CACHE = 31, CASCADE = 32,
+			CASE = 33, CAST = 34, CHANGE = 35, CHECK = 36, CLEAR = 37, CLUSTER = 38, CLUSTERED = 39,
+			CODEGEN = 40, COLLATE = 41, COLLECTION = 42, COLUMN = 43, COLUMNS = 44, COMMENT = 45,
+			COMMIT = 46, COMPACT = 47, COMPACTIONS = 48, COMPUTE = 49, CONCATENATE = 50, CONSTRAINT = 51,
+			COST = 52, CREATE = 53, CROSS = 54, CUBE = 55, CURRENT = 56, CURRENT_DATE = 57, CURRENT_TIME = 58,
+			CURRENT_TIMESTAMP = 59, CURRENT_USER = 60, DATA = 61, DATABASE = 62, DATABASES = 63,
+			DAY = 64, DBPROPERTIES = 65, DEFINED = 66, DELETE = 67, DELIMITED = 68, DESC = 69,
+			DESCRIBE = 70, DFS = 71, DIRECTORIES = 72, DIRECTORY = 73, DISTINCT = 74, DISTRIBUTE = 75,
+			DIV = 76, DROP = 77, ELSE = 78, END = 79, ESCAPE = 80, ESCAPED = 81, EXCEPT = 82, EXCHANGE = 83,
+			EXISTS = 84, EXPLAIN = 85, EXPORT = 86, EXTENDED = 87, EXTERNAL = 88, EXTRACT = 89,
+			FALSE = 90, FETCH = 91, FIELDS = 92, FILTER = 93, FILEFORMAT = 94, FIRST = 95, FOLLOWING = 96,
 			FOR = 97, FOREIGN = 98, FORMAT = 99, FORMATTED = 100, FROM = 101, FULL = 102, FUNCTION = 103,
 			FUNCTIONS = 104, GLOBAL = 105, GRANT = 106, GROUP = 107, GROUPING = 108, HAVING = 109,
 			HOUR = 110, IF = 111, IGNORE = 112, IMPORT = 113, IN = 114, INDEX = 115, INDEXES = 116,
@@ -65,13 +65,13 @@ public class DataInternetLexer extends Lexer {
 			DECIMAL_VALUE = 291, FLOAT_LITERAL = 292, DOUBLE_LITERAL = 293, BIGDECIMAL_LITERAL = 294,
 			IDENTIFIER = 295, BACKQUOTED_IDENTIFIER = 296, SIMPLE_COMMENT = 297, BRACKETED_COMMENT = 298,
 			WS = 299, UNRECOGNIZED = 300;
-	public static final String[] ruleNames = makeRuleNames();
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
 	public static final ATN _ATN =
 			new ATNDeserializer().deserialize(_serializedATN.toCharArray());
-	private static final String[] _LITERAL_NAMES = makeLiteralNames();
-	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
-	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
-	private static final int _serializedATNSegments = 2;
 	private static final String _serializedATNSegment0 =
 			"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\2\u012e\u0b7c\b\1\4" +
 					"\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n" +
@@ -1043,6 +1043,7 @@ public class DataInternetLexer extends Lexer {
 					"\2\u09c3\u09c4\7T\2\2\u09c4\u09c5\7K\2\2\u09c5\u09c6\7O\2\2\u09c6\u01e6" +
 					"\3\2\2\2\u09c7\u09c8\7V\2\2\u09c8\u09c9\7T\2\2\u09c9\u09ca\7W\2\2\u09ca" +
 					"\u09cb\7G\2\2\u09cb\u01e8\3\2\2\2\u09cc\u09cd\7V\2\2";
+	public static final String[] ruleNames = makeRuleNames();
 	private static final String _serializedATNSegment1 =
 			"\u09cd\u09ce\7T\2\2\u09ce\u09cf\7W\2\2\u09cf\u09d0\7P\2\2\u09d0\u09d1" +
 					"\7E\2\2\u09d1\u09d2\7C\2\2\u09d2\u09d3\7V\2\2\u09d3\u09d4\7G\2\2\u09d4" +
@@ -1186,6 +1187,7 @@ public class DataInternetLexer extends Lexer {
 					"\u0ac7\u0ace\u0ad3\u0adb\u0ae3\u0ae6\u0aec\u0af1\u0af6\u0af9\u0aff\u0b04" +
 					"\u0b09\u0b0c\u0b13\u0b1a\u0b1f\u0b21\u0b27\u0b29\u0b31\u0b37\u0b3e\u0b40" +
 					"\u0b44\u0b49\u0b4e\u0b56\u0b58\u0b5c\u0b5f\u0b69\u0b6b\u0b76\3\2\3\2";
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	public static final String _serializedATN = Utils.join(
 			new String[]{
 					_serializedATNSegment0,
@@ -1193,12 +1195,8 @@ public class DataInternetLexer extends Lexer {
 			},
 			""
 	);
-
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	@Deprecated
-	public static final String[] tokenNames;
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
 	public static String[] channelNames = {
 			"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -1219,7 +1217,6 @@ public class DataInternetLexer extends Lexer {
 			}
 		}
 	}
-
 
 	public DataInternetLexer(CharStream input) {
 		super(input);
@@ -1446,9 +1443,7 @@ public class DataInternetLexer extends Lexer {
 	}
 
 	@Override
-	public ATN getATN() {
-		return _ATN;
-	}
+	public ATN getATN() { return _ATN; }
 
 	@Override
 	public boolean sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
@@ -1464,7 +1459,7 @@ public class DataInternetLexer extends Lexer {
 			case 293:
 				return BIGDECIMAL_LITERAL_sempred((RuleContext) _localctx, predIndex);
 			case 301:
-				return BRACKETED_COMMENT_sempred((RuleContext) _localctx, predIndex);
+				return BRACKETED_COMMENT_sempred((RuleContext)_localctx, predIndex);
 		}
 		return true;
 	}
@@ -1484,6 +1479,8 @@ public class DataInternetLexer extends Lexer {
 		}
 		return true;
 	}
+
+	private static final int _serializedATNSegments = 2;
 
 	private boolean FLOAT_LITERAL_sempred(RuleContext _localctx, int predIndex) {
 		switch (predIndex) {
