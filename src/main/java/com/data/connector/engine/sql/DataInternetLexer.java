@@ -30,18 +30,18 @@ public class DataInternetLexer extends Lexer {
 		DESCRIBE=70, DFS=71, DIRECTORIES=72, DIRECTORY=73, DISTINCT=74, DISTRIBUTE=75, 
 		DIV=76, DROP=77, ELSE=78, END=79, ESCAPE=80, ESCAPED=81, EXCEPT=82, EXCHANGE=83, 
 		EXISTS=84, EXPLAIN=85, EXPORT=86, EXTENDED=87, EXTERNAL=88, EXTRACT=89, 
-		FALSE=90, FETCH=91, FIELDS=92, FILTER=93, FILEFORMAT=94, FIRST=95, FOLLOWING=96, 
-		FOR=97, FOREIGN=98, FORMAT=99, FORMATTED=100, FROM=101, FULL=102, FUNCTION=103, 
-		FUNCTIONS=104, GLOBAL=105, GRANT=106, GROUP=107, GROUPING=108, HAVING=109, 
-		HOUR=110, IF=111, IGNORE=112, IMPORT=113, IN=114, INDEX=115, INDEXES=116, 
-		INNER=117, INPATH=118, INPUTFORMAT=119, INSERT=120, INTERSECT=121, INTERVAL=122, 
-		INTO=123, IS=124, ITEMS=125, JOIN=126, KEYS=127, LAST=128, LATERAL=129, 
-		LAZY=130, LEADING=131, LEFT=132, LIKE=133, LIMIT=134, LINES=135, LIST=136, 
-		LOAD=137, LOCAL=138, LOCATION=139, LOCK=140, LOCKS=141, LOGICAL=142, MACRO=143, 
-		MAP=144, MATCHED=145, MERGE=146, MINUTE=147, MONTH=148, MSCK=149, NAMESPACE=150, 
-		NAMESPACES=151, NATURAL=152, NO=153, NOT=154, NULL=155, NULLS=156, OF=157, 
-		ON=158, ONLY=159, OPTION=160, OPTIONS=161, OR=162, ORDER=163, OUT=164, 
-		OUTER=165, OUTPUTFORMAT=166, OVER=167, OVERLAPS=168, OVERLAY=169, OVERWRITE=170,
+		FALSE=90, FETCH=91, FIELDS=92, FILTER=93, FILEFORMAT=94, FIRST=95, FOLLOWING=96,
+			FOR = 97, FOREIGN = 98, FORMAT = 99, FORMATTED = 100, FROM = 101, FULL = 102, FUNCTION = 103,
+			FUNCTIONS = 104, GLOBAL = 105, GRANT = 106, GROUP = 107, GROUPING = 108, HAVING = 109,
+			HOUR = 110, IF = 111, IGNORE = 112, IMPORT = 113, IN = 114, INDEX = 115, INDEXES = 116,
+			INNER = 117, INPATH = 118, INPUTFORMAT = 119, INSERT = 120, INTERSECT = 121, INTERVAL = 122,
+			INTO = 123, IS = 124, ITEMS = 125, JOIN = 126, KEYS = 127, LAST = 128, LATERAL = 129,
+			LAZY = 130, LEADING = 131, LEFT = 132, LIKE = 133, LIMIT = 134, LINES = 135, LIST = 136,
+			LOAD = 137, LOCAL = 138, LOCATION = 139, LOCK = 140, LOCKS = 141, LOGICAL = 142, MACRO = 143,
+			MAP = 144, MATCHED = 145, MERGE = 146, MINUTE = 147, MONTH = 148, MSCK = 149, NAMESPACE = 150,
+			NAMESPACES = 151, NATURAL = 152, NO = 153, NOT = 154, NULL = 155, NULLS = 156, OF = 157,
+			ON = 158, ONLY = 159, OPTION = 160, OPTIONS = 161, OR = 162, ORDER = 163, OUT = 164,
+			OUTER = 165, OUTPUTFORMAT = 166, OVER = 167, OVERLAPS = 168, OVERLAY = 169, OVERWRITE = 170,
 			PARTITION = 171, PARTITIONED = 172, PARTITIONS = 173, PERCENTLIT = 174, PIVOT = 175,
 			PLACING = 176, POSITION = 177, PRECEDING = 178, PRIMARY = 179, PRINCIPALS = 180,
 			PROPERTIES = 181, PURGE = 182, QUERY = 183, RANGE = 184, RECORDREADER = 185, RECORDWRITER = 186,
@@ -65,23 +65,13 @@ public class DataInternetLexer extends Lexer {
 			DECIMAL_VALUE = 291, FLOAT_LITERAL = 292, DOUBLE_LITERAL = 293, BIGDECIMAL_LITERAL = 294,
 			IDENTIFIER = 295, BACKQUOTED_IDENTIFIER = 296, SIMPLE_COMMENT = 297, BRACKETED_COMMENT = 298,
 			WS = 299, UNRECOGNIZED = 300;
-	/**
-	 * @deprecated Use {@link #VOCABULARY} instead.
-	 */
-	@Deprecated
-	public static final String[] tokenNames;
-	public static final String _serializedATN = Utils.join(
-			new String[]{
-					_serializedATNSegment0,
-					_serializedATNSegment1
-			},
-			""
-	);
+	public static final String[] ruleNames = makeRuleNames();
 	public static final ATN _ATN =
 			new ATNDeserializer().deserialize(_serializedATN.toCharArray());
-
-	public static final String[] ruleNames = makeRuleNames();
-
+	private static final String[] _LITERAL_NAMES = makeLiteralNames();
+	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
+	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
+	private static final int _serializedATNSegments = 2;
 	private static final String _serializedATNSegment0 =
 			"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\2\u012e\u0b7c\b\1\4" +
 					"\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n" +
@@ -1053,10 +1043,162 @@ public class DataInternetLexer extends Lexer {
 					"\2\u09c3\u09c4\7T\2\2\u09c4\u09c5\7K\2\2\u09c5\u09c6\7O\2\2\u09c6\u01e6" +
 					"\3\2\2\2\u09c7\u09c8\7V\2\2\u09c8\u09c9\7T\2\2\u09c9\u09ca\7W\2\2\u09ca" +
 					"\u09cb\7G\2\2\u09cb\u01e8\3\2\2\2\u09cc\u09cd\7V\2\2";
-	private static final String[] _LITERAL_NAMES = makeLiteralNames();
-	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
-	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
-	private static final int _serializedATNSegments = 2;
+	private static final String _serializedATNSegment1 =
+			"\u09cd\u09ce\7T\2\2\u09ce\u09cf\7W\2\2\u09cf\u09d0\7P\2\2\u09d0\u09d1" +
+					"\7E\2\2\u09d1\u09d2\7C\2\2\u09d2\u09d3\7V\2\2\u09d3\u09d4\7G\2\2\u09d4" +
+					"\u01ea\3\2\2\2\u09d5\u09d6\7V\2\2\u09d6\u09d7\7[\2\2\u09d7\u09d8\7R\2" +
+					"\2\u09d8\u09d9\7G\2\2\u09d9\u01ec\3\2\2\2\u09da\u09db\7W\2\2\u09db\u09dc" +
+					"\7P\2\2\u09dc\u09dd\7C\2\2\u09dd\u09de\7T\2\2\u09de\u09df\7E\2\2\u09df" +
+					"\u09e0\7J\2\2\u09e0\u09e1\7K\2\2\u09e1\u09e2\7X\2\2\u09e2\u09e3\7G\2\2" +
+					"\u09e3\u01ee\3\2\2\2\u09e4\u09e5\7W\2\2\u09e5\u09e6\7P\2\2\u09e6\u09e7" +
+					"\7D\2\2\u09e7\u09e8\7Q\2\2\u09e8\u09e9\7W\2\2\u09e9\u09ea\7P\2\2\u09ea" +
+					"\u09eb\7F\2\2\u09eb\u09ec\7G\2\2\u09ec\u09ed\7F\2\2\u09ed\u01f0\3\2\2" +
+					"\2\u09ee\u09ef\7W\2\2\u09ef\u09f0\7P\2\2\u09f0\u09f1\7E\2\2\u09f1\u09f2" +
+					"\7C\2\2\u09f2\u09f3\7E\2\2\u09f3\u09f4\7J\2\2\u09f4\u09f5\7G\2\2\u09f5" +
+					"\u01f2\3\2\2\2\u09f6\u09f7\7W\2\2\u09f7\u09f8\7P\2\2\u09f8\u09f9\7K\2" +
+					"\2\u09f9\u09fa\7Q\2\2\u09fa\u09fb\7P\2\2\u09fb\u01f4\3\2\2\2\u09fc\u09fd" +
+					"\7W\2\2\u09fd\u09fe\7P\2\2\u09fe\u09ff\7K\2\2\u09ff\u0a00\7S\2\2\u0a00" +
+					"\u0a01\7W\2\2\u0a01\u0a02\7G\2\2\u0a02\u01f6\3\2\2\2\u0a03\u0a04\7W\2" +
+					"\2\u0a04\u0a05\7P\2\2\u0a05\u0a06\7M\2\2\u0a06\u0a07\7P\2\2\u0a07\u0a08" +
+					"\7Q\2\2\u0a08\u0a09\7Y\2\2\u0a09\u0a0a\7P\2\2\u0a0a\u01f8\3\2\2\2\u0a0b" +
+					"\u0a0c\7W\2\2\u0a0c\u0a0d\7P\2\2\u0a0d\u0a0e\7N\2\2\u0a0e\u0a0f\7Q\2\2" +
+					"\u0a0f\u0a10\7E\2\2\u0a10\u0a11\7M\2\2\u0a11\u01fa\3\2\2\2\u0a12\u0a13" +
+					"\7W\2\2\u0a13\u0a14\7P\2\2\u0a14\u0a15\7U\2\2\u0a15\u0a16\7G\2\2\u0a16" +
+					"\u0a17\7V\2\2\u0a17\u01fc\3\2\2\2\u0a18\u0a19\7W\2\2\u0a19\u0a1a\7R\2" +
+					"\2\u0a1a\u0a1b\7F\2\2\u0a1b\u0a1c\7C\2\2\u0a1c\u0a1d\7V\2\2\u0a1d\u0a1e" +
+					"\7G\2\2\u0a1e\u01fe\3\2\2\2\u0a1f\u0a20\7W\2\2\u0a20\u0a21\7U\2\2\u0a21" +
+					"\u0a22\7G\2\2\u0a22\u0200\3\2\2\2\u0a23\u0a24\7W\2\2\u0a24\u0a25\7U\2" +
+					"\2\u0a25\u0a26\7G\2\2\u0a26\u0a27\7T\2\2\u0a27\u0202\3\2\2\2\u0a28\u0a29" +
+					"\7W\2\2\u0a29\u0a2a\7U\2\2\u0a2a\u0a2b\7K\2\2\u0a2b\u0a2c\7P\2\2\u0a2c" +
+					"\u0a2d\7I\2\2\u0a2d\u0204\3\2\2\2\u0a2e\u0a2f\7X\2\2\u0a2f\u0a30\7C\2" +
+					"\2\u0a30\u0a31\7N\2\2\u0a31\u0a32\7W\2\2\u0a32\u0a33\7G\2\2\u0a33\u0a34" +
+					"\7U\2\2\u0a34\u0206\3\2\2\2\u0a35\u0a36\7X\2\2\u0a36\u0a37\7K\2\2\u0a37" +
+					"\u0a38\7G\2\2\u0a38\u0a39\7Y\2\2\u0a39\u0208\3\2\2\2\u0a3a\u0a3b\7X\2" +
+					"\2\u0a3b\u0a3c\7K\2\2\u0a3c\u0a3d\7G\2\2\u0a3d\u0a3e\7Y\2\2\u0a3e\u0a3f" +
+					"\7U\2\2\u0a3f\u020a\3\2\2\2\u0a40\u0a41\7Y\2\2\u0a41\u0a42\7J\2\2\u0a42" +
+					"\u0a43\7G\2\2\u0a43\u0a49\7P\2\2\u0a44\u0a45\7y\2\2\u0a45\u0a46\7j\2\2" +
+					"\u0a46\u0a47\7g\2\2\u0a47\u0a49\7p\2\2\u0a48\u0a40\3\2\2\2\u0a48\u0a44" +
+					"\3\2\2\2\u0a49\u020c\3\2\2\2\u0a4a\u0a4b\7Y\2\2\u0a4b\u0a4c\7J\2\2\u0a4c" +
+					"\u0a4d\7G\2\2\u0a4d\u0a4e\7T\2\2\u0a4e\u0a55\7G\2\2\u0a4f\u0a50\7y\2\2" +
+					"\u0a50\u0a51\7j\2\2\u0a51\u0a52\7g\2\2\u0a52\u0a53\7t\2\2\u0a53\u0a55" +
+					"\7g\2\2\u0a54\u0a4a\3\2\2\2\u0a54\u0a4f\3\2\2\2\u0a55\u020e\3\2\2\2\u0a56" +
+					"\u0a57\7Y\2\2\u0a57\u0a58\7K\2\2\u0a58\u0a59\7P\2\2\u0a59\u0a5a\7F\2\2" +
+					"\u0a5a\u0a5b\7Q\2\2\u0a5b\u0a5c\7Y\2\2\u0a5c\u0210\3\2\2\2\u0a5d\u0a5e" +
+					"\7Y\2\2\u0a5e\u0a5f\7K\2\2\u0a5f\u0a60\7V\2\2\u0a60\u0a61\7J\2\2\u0a61" +
+					"\u0212\3\2\2\2\u0a62\u0a63\7[\2\2\u0a63\u0a64\7G\2\2\u0a64\u0a65\7C\2" +
+					"\2\u0a65\u0a66\7T\2\2\u0a66\u0214\3\2\2\2\u0a67\u0a68\7\\\2\2\u0a68\u0a69" +
+					"\7Q\2\2\u0a69\u0a6a\7P\2\2\u0a6a\u0a6b\7G\2\2\u0a6b\u0216\3\2\2\2\u0a6c" +
+					"\u0a70\7?\2\2\u0a6d\u0a6e\7?\2\2\u0a6e\u0a70\7?\2\2\u0a6f\u0a6c\3\2\2" +
+					"\2\u0a6f\u0a6d\3\2\2\2\u0a70\u0218\3\2\2\2\u0a71\u0a72\7>\2\2\u0a72\u0a73" +
+					"\7?\2\2\u0a73\u0a74\7@\2\2\u0a74\u021a\3\2\2\2\u0a75\u0a76\7>\2\2\u0a76" +
+					"\u0a77\7@\2\2\u0a77\u021c\3\2\2\2\u0a78\u0a79\7#\2\2\u0a79\u0a7a\7?\2" +
+					"\2\u0a7a\u021e\3\2\2\2\u0a7b\u0a7c\7>\2\2\u0a7c\u0220\3\2\2\2\u0a7d\u0a7e" +
+					"\7>\2\2\u0a7e\u0a82\7?\2\2\u0a7f\u0a80\7#\2\2\u0a80\u0a82\7@\2\2\u0a81" +
+					"\u0a7d\3\2\2\2\u0a81\u0a7f\3\2\2\2\u0a82\u0222\3\2\2\2\u0a83\u0a84\7@" +
+					"\2\2\u0a84\u0224\3\2\2\2\u0a85\u0a86\7@\2\2\u0a86\u0a8a\7?\2\2\u0a87\u0a88" +
+					"\7#\2\2\u0a88\u0a8a\7>\2\2\u0a89\u0a85\3\2\2\2\u0a89\u0a87\3\2\2\2\u0a8a" +
+					"\u0226\3\2\2\2\u0a8b\u0a8c\7-\2\2\u0a8c\u0228\3\2\2\2\u0a8d\u0a8e\7/\2" +
+					"\2\u0a8e\u022a\3\2\2\2\u0a8f\u0a90\7,\2\2\u0a90\u022c\3\2\2\2\u0a91\u0a92" +
+					"\7\61\2\2\u0a92\u022e\3\2\2\2\u0a93\u0a94\7\'\2\2\u0a94\u0230\3\2\2\2" +
+					"\u0a95\u0a96\7\u0080\2\2\u0a96\u0232\3\2\2\2\u0a97\u0a98\7(\2\2\u0a98" +
+					"\u0234\3\2\2\2\u0a99\u0a9a\7~\2\2\u0a9a\u0236\3\2\2\2\u0a9b\u0a9c\7~\2" +
+					"\2\u0a9c\u0a9d\7~\2\2\u0a9d\u0238\3\2\2\2\u0a9e\u0a9f\7`\2\2\u0a9f\u023a" +
+					"\3\2\2\2\u0aa0\u0aa6\7)\2\2\u0aa1\u0aa5\n\2\2\2\u0aa2\u0aa3\7^\2\2\u0aa3" +
+					"\u0aa5\13\2\2\2\u0aa4\u0aa1\3\2\2\2\u0aa4\u0aa2\3\2\2\2\u0aa5\u0aa8\3" +
+					"\2\2\2\u0aa6\u0aa4\3\2\2\2\u0aa6\u0aa7\3\2\2\2\u0aa7\u0aa9\3\2\2\2\u0aa8" +
+					"\u0aa6\3\2\2\2\u0aa9\u0ab5\7)\2\2\u0aaa\u0ab0\7$\2\2\u0aab\u0aaf\n\3\2" +
+					"\2\u0aac\u0aad\7^\2\2\u0aad\u0aaf\13\2\2\2\u0aae\u0aab\3\2\2\2\u0aae\u0aac" +
+					"\3\2\2\2\u0aaf\u0ab2\3\2\2\2\u0ab0\u0aae\3\2\2\2\u0ab0\u0ab1\3\2\2\2\u0ab1" +
+					"\u0ab3\3\2\2\2\u0ab2\u0ab0\3\2\2\2\u0ab3\u0ab5\7$\2\2\u0ab4\u0aa0\3\2" +
+					"\2\2\u0ab4\u0aaa\3\2\2\2\u0ab5\u023c\3\2\2\2\u0ab6\u0ab8\5\u0257\u012c" +
+					"\2\u0ab7\u0ab6\3\2\2\2\u0ab8\u0ab9\3\2\2\2\u0ab9\u0ab7\3\2\2\2\u0ab9\u0aba" +
+					"\3\2\2\2\u0aba\u0abb\3\2\2\2\u0abb\u0abc\7N\2\2\u0abc\u023e\3\2\2\2\u0abd" +
+					"\u0abf\5\u0257\u012c\2\u0abe\u0abd\3\2\2\2\u0abf\u0ac0\3\2\2\2\u0ac0\u0abe" +
+					"\3\2\2\2\u0ac0\u0ac1\3\2\2\2\u0ac1\u0ac2\3\2\2\2\u0ac2\u0ac3\7U\2\2\u0ac3" +
+					"\u0240\3\2\2\2\u0ac4\u0ac6\5\u0257\u012c\2\u0ac5\u0ac4\3\2\2\2\u0ac6\u0ac7" +
+					"\3\2\2\2\u0ac7\u0ac5\3\2\2\2\u0ac7\u0ac8\3\2\2\2\u0ac8\u0ac9\3\2\2\2\u0ac9" +
+					"\u0aca\7[\2\2\u0aca\u0242\3\2\2\2\u0acb\u0acd\5\u0257\u012c\2\u0acc\u0acb" +
+					"\3\2\2\2\u0acd\u0ace\3\2\2\2\u0ace\u0acc\3\2\2\2\u0ace\u0acf\3\2\2\2\u0acf" +
+					"\u0244\3\2\2\2\u0ad0\u0ad2\5\u0257\u012c\2\u0ad1\u0ad0\3\2\2\2\u0ad2\u0ad3" +
+					"\3\2\2\2\u0ad3\u0ad1\3\2\2\2\u0ad3\u0ad4\3\2\2\2\u0ad4\u0ad5\3\2\2\2\u0ad5" +
+					"\u0ad6\5\u0255\u012b\2\u0ad6\u0adc\3\2\2\2\u0ad7\u0ad8\5\u0253\u012a\2" +
+					"\u0ad8\u0ad9\5\u0255\u012b\2\u0ad9\u0ada\6\u0123\2\2\u0ada\u0adc\3\2\2" +
+					"\2\u0adb\u0ad1\3\2\2\2\u0adb\u0ad7\3\2\2\2\u0adc\u0246\3\2\2\2\u0add\u0ade" +
+					"\5\u0253\u012a\2\u0ade\u0adf\6\u0124\3\2\u0adf\u0248\3\2\2\2\u0ae0\u0ae2" +
+					"\5\u0257\u012c\2\u0ae1\u0ae0\3\2\2\2\u0ae2\u0ae3\3\2\2\2\u0ae3\u0ae1\3" +
+					"\2\2\2\u0ae3\u0ae4\3\2\2\2\u0ae4\u0ae6\3\2\2\2\u0ae5\u0ae7\5\u0255\u012b" +
+					"\2\u0ae6\u0ae5\3\2\2\2\u0ae6\u0ae7\3\2\2\2\u0ae7\u0ae8\3\2\2\2\u0ae8\u0ae9" +
+					"\7H\2\2\u0ae9\u0af2\3\2\2\2\u0aea\u0aec\5\u0253\u012a\2\u0aeb\u0aed\5" +
+					"\u0255\u012b\2\u0aec\u0aeb\3\2\2\2\u0aec\u0aed\3\2\2\2\u0aed\u0aee\3\2" +
+					"\2\2\u0aee\u0aef\7H\2\2\u0aef\u0af0\6\u0125\4\2\u0af0\u0af2\3\2\2\2\u0af1" +
+					"\u0ae1\3\2\2\2\u0af1\u0aea\3\2\2\2\u0af2\u024a\3\2\2\2\u0af3\u0af5\5\u0257" +
+					"\u012c\2\u0af4\u0af3\3\2\2\2\u0af5\u0af6\3\2\2\2\u0af6\u0af4\3\2\2\2\u0af6" +
+					"\u0af7\3\2\2\2\u0af7\u0af9\3\2\2\2\u0af8\u0afa\5\u0255\u012b\2\u0af9\u0af8" +
+					"\3\2\2\2\u0af9\u0afa\3\2\2\2\u0afa\u0afb\3\2\2\2\u0afb\u0afc\7F\2\2\u0afc" +
+					"\u0b05\3\2\2\2\u0afd\u0aff\5\u0253\u012a\2\u0afe\u0b00\5\u0255\u012b\2" +
+					"\u0aff\u0afe\3\2\2\2\u0aff\u0b00\3\2\2\2\u0b00\u0b01\3\2\2\2\u0b01\u0b02" +
+					"\7F\2\2\u0b02\u0b03\6\u0126\5\2\u0b03\u0b05\3\2\2\2\u0b04\u0af4\3\2\2" +
+					"\2\u0b04\u0afd\3\2\2\2\u0b05\u024c\3\2\2\2\u0b06\u0b08\5\u0257\u012c\2" +
+					"\u0b07\u0b06\3\2\2\2\u0b08\u0b09\3\2\2\2\u0b09\u0b07\3\2\2\2\u0b09\u0b0a" +
+					"\3\2\2\2\u0b0a\u0b0c\3\2\2\2\u0b0b\u0b0d\5\u0255\u012b\2\u0b0c\u0b0b\3" +
+					"\2\2\2\u0b0c\u0b0d\3\2\2\2\u0b0d\u0b0e\3\2\2\2\u0b0e\u0b0f\7D\2\2\u0b0f" +
+					"\u0b10\7F\2\2\u0b10\u0b1b\3\2\2\2\u0b11\u0b13\5\u0253\u012a\2\u0b12\u0b14" +
+					"\5\u0255\u012b\2\u0b13\u0b12\3\2\2\2\u0b13\u0b14\3\2\2\2\u0b14\u0b15\3" +
+					"\2\2\2\u0b15\u0b16\7D\2\2\u0b16\u0b17\7F\2\2\u0b17\u0b18\3\2\2\2\u0b18" +
+					"\u0b19\6\u0127\6\2\u0b19\u0b1b\3\2\2\2\u0b1a\u0b07\3\2\2\2\u0b1a\u0b11" +
+					"\3\2\2\2\u0b1b\u024e\3\2\2\2\u0b1c\u0b20\5\u0259\u012d\2\u0b1d\u0b20\5" +
+					"\u0257\u012c\2\u0b1e\u0b20\7a\2\2\u0b1f\u0b1c\3\2\2\2\u0b1f\u0b1d\3\2" +
+					"\2\2\u0b1f\u0b1e\3\2\2\2\u0b20\u0b21\3\2\2\2\u0b21\u0b1f\3\2\2\2\u0b21" +
+					"\u0b22\3\2\2\2\u0b22\u0250\3\2\2\2\u0b23\u0b29\7b\2\2\u0b24\u0b28\n\4" +
+					"\2\2\u0b25\u0b26\7b\2\2\u0b26\u0b28\7b\2\2\u0b27\u0b24\3\2\2\2\u0b27\u0b25" +
+					"\3\2\2\2\u0b28\u0b2b\3\2\2\2\u0b29\u0b27\3\2\2\2\u0b29\u0b2a\3\2\2\2\u0b2a" +
+					"\u0b2c\3\2\2\2\u0b2b\u0b29\3\2\2\2\u0b2c\u0b2d\7b\2\2\u0b2d\u0252\3\2" +
+					"\2\2\u0b2e\u0b30\5\u0257\u012c\2\u0b2f\u0b2e\3\2\2\2\u0b30\u0b31\3\2\2" +
+					"\2\u0b31\u0b2f\3\2\2\2\u0b31\u0b32\3\2\2\2\u0b32\u0b33\3\2\2\2\u0b33\u0b37" +
+					"\7\60\2\2\u0b34\u0b36\5\u0257\u012c\2\u0b35\u0b34\3\2\2\2\u0b36\u0b39" +
+					"\3\2\2\2\u0b37\u0b35\3\2\2\2\u0b37\u0b38\3\2\2\2\u0b38\u0b41\3\2\2\2\u0b39" +
+					"\u0b37\3\2\2\2\u0b3a\u0b3c\7\60\2\2\u0b3b\u0b3d\5\u0257\u012c\2\u0b3c" +
+					"\u0b3b\3\2\2\2\u0b3d\u0b3e\3\2\2\2\u0b3e\u0b3c\3\2\2\2\u0b3e\u0b3f\3\2" +
+					"\2\2\u0b3f\u0b41\3\2\2\2\u0b40\u0b2f\3\2\2\2\u0b40\u0b3a\3\2\2\2\u0b41" +
+					"\u0254\3\2\2\2\u0b42\u0b44\7G\2\2\u0b43\u0b45\t\5\2\2\u0b44\u0b43\3\2" +
+					"\2\2\u0b44\u0b45\3\2\2\2\u0b45\u0b47\3\2\2\2\u0b46\u0b48\5\u0257\u012c" +
+					"\2\u0b47\u0b46\3\2\2\2\u0b48\u0b49\3\2\2\2\u0b49\u0b47\3\2\2\2\u0b49\u0b4a" +
+					"\3\2\2\2\u0b4a\u0256\3\2\2\2\u0b4b\u0b4c\t\6\2\2\u0b4c\u0258\3\2\2\2\u0b4d" +
+					"\u0b4f\t\7\2\2\u0b4e\u0b4d\3\2\2\2\u0b4f\u025a\3\2\2\2\u0b50\u0b51\7/" +
+					"\2\2\u0b51\u0b52\7/\2\2\u0b52\u0b58\3\2\2\2\u0b53\u0b54\7^\2\2\u0b54\u0b57" +
+					"\7\f\2\2\u0b55\u0b57\n\b\2\2\u0b56\u0b53\3\2\2\2\u0b56\u0b55\3\2\2\2\u0b57" +
+					"\u0b5a\3\2\2\2\u0b58\u0b56\3\2\2\2\u0b58\u0b59\3\2\2\2\u0b59\u0b5c\3\2" +
+					"\2\2\u0b5a\u0b58\3\2\2\2\u0b5b\u0b5d\7\17\2\2\u0b5c\u0b5b\3\2\2\2\u0b5c" +
+					"\u0b5d\3\2\2\2\u0b5d\u0b5f\3\2\2\2\u0b5e\u0b60\7\f\2\2\u0b5f\u0b5e\3\2" +
+					"\2\2\u0b5f\u0b60\3\2\2\2\u0b60\u0b61\3\2\2\2\u0b61\u0b62\b\u012e\2\2\u0b62" +
+					"\u025c\3\2\2\2\u0b63\u0b64\7\61\2\2\u0b64\u0b65\7,\2\2\u0b65\u0b66\3\2" +
+					"\2\2\u0b66\u0b6b\6\u012f\7\2\u0b67\u0b6a\5\u025d\u012f\2\u0b68\u0b6a\13" +
+					"\2\2\2\u0b69\u0b67\3\2\2\2\u0b69\u0b68\3\2\2\2\u0b6a\u0b6d\3\2\2\2\u0b6b" +
+					"\u0b6c\3\2\2\2\u0b6b\u0b69\3\2\2\2\u0b6c\u0b6e\3\2\2\2\u0b6d\u0b6b\3\2" +
+					"\2\2\u0b6e\u0b6f\7,\2\2\u0b6f\u0b70\7\61\2\2\u0b70\u0b71\3\2\2\2\u0b71" +
+					"\u0b72\b\u012f\2\2\u0b72\u025e\3\2\2\2\u0b73\u0b75\t\t\2\2\u0b74\u0b73" +
+					"\3\2\2\2\u0b75\u0b76\3\2\2\2\u0b76\u0b74\3\2\2\2\u0b76\u0b77\3\2\2\2\u0b77" +
+					"\u0b78\3\2\2\2\u0b78\u0b79\b\u0130\2\2\u0b79\u0260\3\2\2\2\u0b7a\u0b7b" +
+					"\13\2\2\2\u0b7b\u0262\3\2\2\2P\2\u029f\u02bc\u02c4\u02e5\u02ff\u0365\u0375" +
+					"\u042f\u0463\u0498\u04b9\u04e6\u056b\u059c\u05ae\u05bc\u05c7\u05db\u05f5" +
+					"\u063a\u0663\u066d\u069c\u06fd\u0711\u072b\u0737\u0863\u08a3\u0946\u0976" +
+					"\u0a48\u0a54\u0a6f\u0a81\u0a89\u0aa4\u0aa6\u0aae\u0ab0\u0ab4\u0ab9\u0ac0" +
+					"\u0ac7\u0ace\u0ad3\u0adb\u0ae3\u0ae6\u0aec\u0af1\u0af6\u0af9\u0aff\u0b04" +
+					"\u0b09\u0b0c\u0b13\u0b1a\u0b1f\u0b21\u0b27\u0b29\u0b31\u0b37\u0b3e\u0b40" +
+					"\u0b44\u0b49\u0b4e\u0b56\u0b58\u0b5c\u0b5f\u0b69\u0b6b\u0b76\3\2\3\2";
+	public static final String _serializedATN = Utils.join(
+			new String[]{
+					_serializedATNSegment0,
+					_serializedATNSegment1
+			},
+			""
+	);
+
+	/**
+	 * @deprecated Use {@link #VOCABULARY} instead.
+	 */
+	@Deprecated
+	public static final String[] tokenNames;
 	public static String[] channelNames = {
 			"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -1077,6 +1219,7 @@ public class DataInternetLexer extends Lexer {
 			}
 		}
 	}
+
 
 	public DataInternetLexer(CharStream input) {
 		super(input);
@@ -1128,6 +1271,54 @@ public class DataInternetLexer extends Lexer {
 				"FLOAT_LITERAL", "DOUBLE_LITERAL", "BIGDECIMAL_LITERAL", "IDENTIFIER",
 				"BACKQUOTED_IDENTIFIER", "DECIMAL_DIGITS", "EXPONENT", "DIGIT", "LETTER",
 				"SIMPLE_COMMENT", "BRACKETED_COMMENT", "WS", "UNRECOGNIZED"
+		};
+	}
+
+	private static String[] makeLiteralNames() {
+		return new String[]{
+				null, "';'", "'('", "')'", "','", "'.'", "'/*+'", "'*/'", "'->'", "'['",
+				"']'", "':'", "'ADD'", "'AFTER'", "'ALL'", "'ALTER'", "'ANALYZE'", null,
+				"'ANTI'", "'ANY'", "'ARCHIVE'", "'ARRAY'", null, null, "'AT'", "'AUTHORIZATION'",
+				null, "'BOTH'", "'BUCKET'", "'BUCKETS'", null, "'CACHE'", "'CASCADE'",
+				"'CASE'", "'CAST'", "'CHANGE'", "'CHECK'", "'CLEAR'", "'CLUSTER'", "'CLUSTERED'",
+				"'CODEGEN'", "'COLLATE'", "'COLLECTION'", null, null, "'COMMENT'", "'COMMIT'",
+				"'COMPACT'", "'COMPACTIONS'", "'COMPUTE'", "'CONCATENATE'", "'CONSTRAINT'",
+				"'COST'", "'CREATE'", "'CROSS'", "'CUBE'", "'CURRENT'", "'CURRENT_DATE'",
+				"'CURRENT_TIME'", "'CURRENT_TIMESTAMP'", "'CURRENT_USER'", "'DATA'",
+				"'DATABASE'", null, "'DAY'", "'DBPROPERTIES'", "'DEFINED'", "'DELETE'",
+				"'DELIMITED'", null, "'DESCRIBE'", "'DFS'", "'DIRECTORIES'", "'DIRECTORY'",
+				null, "'DISTRIBUTE'", "'DIV'", "'DROP'", "'ELSE'", null, "'ESCAPE'",
+				"'ESCAPED'", "'EXCEPT'", "'EXCHANGE'", null, "'EXPLAIN'", "'EXPORT'",
+				"'EXTENDED'", "'EXTERNAL'", "'EXTRACT'", "'FALSE'", "'FETCH'", "'FIELDS'",
+				"'FILTER'", "'FILEFORMAT'", "'FIRST'", "'FOLLOWING'", "'FOR'", "'FOREIGN'",
+				"'FORMAT'", "'FORMATTED'", null, "'FULL'", "'FUNCTION'", "'FUNCTIONS'",
+				"'GLOBAL'", "'GRANT'", null, null, null, "'HOUR'", null, "'IGNORE'",
+				"'IMPORT'", null, "'INDEX'", "'INDEXES'", null, "'INPATH'", "'INPUTFORMAT'",
+				"'INSERT'", "'INTERSECT'", "'INTERVAL'", "'INTO'", "'IS'", "'ITEMS'",
+				null, "'KEYS'", "'LAST'", "'LATERAL'", "'LAZY'", "'LEADING'", null, null,
+				"'LIMIT'", "'LINES'", "'LIST'", "'LOAD'", "'LOCAL'", "'LOCATION'", null,
+				"'LOCKS'", "'LOGICAL'", "'MACRO'", "'MAP'", "'MATCHED'", "'MERGE'", "'MINUTE'",
+				"'MONTH'", "'MSCK'", "'NAMESPACE'", "'NAMESPACES'", "'NATURAL'", "'NO'",
+				null, "'NULL'", "'NULLS'", "'OF'", null, "'ONLY'", "'OPTION'", "'OPTIONS'",
+				null, null, "'OUT'", "'OUTER'", "'OUTPUTFORMAT'", "'OVER'", "'OVERLAPS'",
+				"'OVERLAY'", "'OVERWRITE'", "'PARTITION'", "'PARTITIONED'", "'PARTITIONS'",
+				"'PERCENT'", "'PIVOT'", "'PLACING'", "'POSITION'", "'PRECEDING'", "'PRIMARY'",
+				"'PRINCIPALS'", "'PROPERTIES'", "'PURGE'", "'QUERY'", "'RANGE'", "'RECORDREADER'",
+				"'RECORDWRITER'", "'RECOVER'", "'REDUCE'", "'REFERENCES'", "'REFRESH'",
+				"'RENAME'", "'REPAIR'", "'REPLACE'", "'RESET'", "'RESTRICT'", "'REVOKE'",
+				"'RIGHT'", null, "'ROLE'", "'ROLES'", "'ROLLBACK'", "'ROLLUP'", "'ROW'",
+				"'ROWS'", "'SCHEMA'", "'SECOND'", null, "'SEMI'", "'SEPARATED'", "'SERDE'",
+				"'SERDEPROPERTIES'", "'SESSION_USER'", "'SET'", "'MINUS'", "'SETS'",
+				"'SHOW'", "'SKEWED'", "'SOME'", "'SORT'", "'SORTED'", "'START'", "'STATISTICS'",
+				"'STORED'", "'STRATIFY'", "'STRUCT'", "'SUBSTR'", "'SUBSTRING'", null,
+				"'TABLES'", "'TABLESAMPLE'", "'TBLPROPERTIES'", null, "'TERMINATED'",
+				"'THEN'", "'TIME'", "'TO'", "'TOUCH'", "'TRAILING'", "'TRANSACTION'",
+				"'TRANSACTIONS'", "'TRANSFORM'", "'TRIM'", "'TRUE'", "'TRUNCATE'", "'TYPE'",
+				"'UNARCHIVE'", "'UNBOUNDED'", "'UNCACHE'", "'UNION'", "'UNIQUE'", "'UNKNOWN'",
+				"'UNLOCK'", "'UNSET'", "'UPDATE'", "'USE'", "'USER'", "'USING'", "'VALUES'",
+				"'VIEW'", "'VIEWS'", null, null, "'WINDOW'", "'WITH'", "'YEAR'", "'ZONE'",
+				null, "'<=>'", "'<>'", "'!='", "'<'", null, "'>'", null, "'+'", "'-'",
+				"'*'", "'/'", "'%'", "'~'", "'&'", "'|'", "'||'", "'^'"
 		};
 	}
 
@@ -1310,198 +1501,6 @@ public class DataInternetLexer extends Lexer {
 		return true;
 	}
 
-	private static final String _serializedATNSegment1 =
-			"\u09cd\u09ce\7T\2\2\u09ce\u09cf\7W\2\2\u09cf\u09d0\7P\2\2\u09d0\u09d1" +
-					"\7E\2\2\u09d1\u09d2\7C\2\2\u09d2\u09d3\7V\2\2\u09d3\u09d4\7G\2\2\u09d4" +
-					"\u01ea\3\2\2\2\u09d5\u09d6\7V\2\2\u09d6\u09d7\7[\2\2\u09d7\u09d8\7R\2" +
-					"\2\u09d8\u09d9\7G\2\2\u09d9\u01ec\3\2\2\2\u09da\u09db\7W\2\2\u09db\u09dc" +
-					"\7P\2\2\u09dc\u09dd\7C\2\2\u09dd\u09de\7T\2\2\u09de\u09df\7E\2\2\u09df" +
-					"\u09e0\7J\2\2\u09e0\u09e1\7K\2\2\u09e1\u09e2\7X\2\2\u09e2\u09e3\7G\2\2" +
-					"\u09e3\u01ee\3\2\2\2\u09e4\u09e5\7W\2\2\u09e5\u09e6\7P\2\2\u09e6\u09e7" +
-					"\7D\2\2\u09e7\u09e8\7Q\2\2\u09e8\u09e9\7W\2\2\u09e9\u09ea\7P\2\2\u09ea" +
-					"\u09eb\7F\2\2\u09eb\u09ec\7G\2\2\u09ec\u09ed\7F\2\2\u09ed\u01f0\3\2\2" +
-					"\2\u09ee\u09ef\7W\2\2\u09ef\u09f0\7P\2\2\u09f0\u09f1\7E\2\2\u09f1\u09f2" +
-					"\7C\2\2\u09f2\u09f3\7E\2\2\u09f3\u09f4\7J\2\2\u09f4\u09f5\7G\2\2\u09f5" +
-					"\u01f2\3\2\2\2\u09f6\u09f7\7W\2\2\u09f7\u09f8\7P\2\2\u09f8\u09f9\7K\2" +
-					"\2\u09f9\u09fa\7Q\2\2\u09fa\u09fb\7P\2\2\u09fb\u01f4\3\2\2\2\u09fc\u09fd" +
-					"\7W\2\2\u09fd\u09fe\7P\2\2\u09fe\u09ff\7K\2\2\u09ff\u0a00\7S\2\2\u0a00" +
-					"\u0a01\7W\2\2\u0a01\u0a02\7G\2\2\u0a02\u01f6\3\2\2\2\u0a03\u0a04\7W\2" +
-					"\2\u0a04\u0a05\7P\2\2\u0a05\u0a06\7M\2\2\u0a06\u0a07\7P\2\2\u0a07\u0a08" +
-					"\7Q\2\2\u0a08\u0a09\7Y\2\2\u0a09\u0a0a\7P\2\2\u0a0a\u01f8\3\2\2\2\u0a0b" +
-					"\u0a0c\7W\2\2\u0a0c\u0a0d\7P\2\2\u0a0d\u0a0e\7N\2\2\u0a0e\u0a0f\7Q\2\2" +
-					"\u0a0f\u0a10\7E\2\2\u0a10\u0a11\7M\2\2\u0a11\u01fa\3\2\2\2\u0a12\u0a13" +
-					"\7W\2\2\u0a13\u0a14\7P\2\2\u0a14\u0a15\7U\2\2\u0a15\u0a16\7G\2\2\u0a16" +
-					"\u0a17\7V\2\2\u0a17\u01fc\3\2\2\2\u0a18\u0a19\7W\2\2\u0a19\u0a1a\7R\2" +
-					"\2\u0a1a\u0a1b\7F\2\2\u0a1b\u0a1c\7C\2\2\u0a1c\u0a1d\7V\2\2\u0a1d\u0a1e" +
-					"\7G\2\2\u0a1e\u01fe\3\2\2\2\u0a1f\u0a20\7W\2\2\u0a20\u0a21\7U\2\2\u0a21" +
-					"\u0a22\7G\2\2\u0a22\u0200\3\2\2\2\u0a23\u0a24\7W\2\2\u0a24\u0a25\7U\2" +
-					"\2\u0a25\u0a26\7G\2\2\u0a26\u0a27\7T\2\2\u0a27\u0202\3\2\2\2\u0a28\u0a29" +
-					"\7W\2\2\u0a29\u0a2a\7U\2\2\u0a2a\u0a2b\7K\2\2\u0a2b\u0a2c\7P\2\2\u0a2c" +
-					"\u0a2d\7I\2\2\u0a2d\u0204\3\2\2\2\u0a2e\u0a2f\7X\2\2\u0a2f\u0a30\7C\2" +
-					"\2\u0a30\u0a31\7N\2\2\u0a31\u0a32\7W\2\2\u0a32\u0a33\7G\2\2\u0a33\u0a34" +
-					"\7U\2\2\u0a34\u0206\3\2\2\2\u0a35\u0a36\7X\2\2\u0a36\u0a37\7K\2\2\u0a37" +
-					"\u0a38\7G\2\2\u0a38\u0a39\7Y\2\2\u0a39\u0208\3\2\2\2\u0a3a\u0a3b\7X\2" +
-					"\2\u0a3b\u0a3c\7K\2\2\u0a3c\u0a3d\7G\2\2\u0a3d\u0a3e\7Y\2\2\u0a3e\u0a3f" +
-					"\7U\2\2\u0a3f\u020a\3\2\2\2\u0a40\u0a41\7Y\2\2\u0a41\u0a42\7J\2\2\u0a42" +
-					"\u0a43\7G\2\2\u0a43\u0a49\7P\2\2\u0a44\u0a45\7y\2\2\u0a45\u0a46\7j\2\2" +
-					"\u0a46\u0a47\7g\2\2\u0a47\u0a49\7p\2\2\u0a48\u0a40\3\2\2\2\u0a48\u0a44" +
-					"\3\2\2\2\u0a49\u020c\3\2\2\2\u0a4a\u0a4b\7Y\2\2\u0a4b\u0a4c\7J\2\2\u0a4c" +
-					"\u0a4d\7G\2\2\u0a4d\u0a4e\7T\2\2\u0a4e\u0a55\7G\2\2\u0a4f\u0a50\7y\2\2" +
-					"\u0a50\u0a51\7j\2\2\u0a51\u0a52\7g\2\2\u0a52\u0a53\7t\2\2\u0a53\u0a55" +
-					"\7g\2\2\u0a54\u0a4a\3\2\2\2\u0a54\u0a4f\3\2\2\2\u0a55\u020e\3\2\2\2\u0a56" +
-					"\u0a57\7Y\2\2\u0a57\u0a58\7K\2\2\u0a58\u0a59\7P\2\2\u0a59\u0a5a\7F\2\2" +
-					"\u0a5a\u0a5b\7Q\2\2\u0a5b\u0a5c\7Y\2\2\u0a5c\u0210\3\2\2\2\u0a5d\u0a5e" +
-					"\7Y\2\2\u0a5e\u0a5f\7K\2\2\u0a5f\u0a60\7V\2\2\u0a60\u0a61\7J\2\2\u0a61" +
-					"\u0212\3\2\2\2\u0a62\u0a63\7[\2\2\u0a63\u0a64\7G\2\2\u0a64\u0a65\7C\2" +
-					"\2\u0a65\u0a66\7T\2\2\u0a66\u0214\3\2\2\2\u0a67\u0a68\7\\\2\2\u0a68\u0a69" +
-					"\7Q\2\2\u0a69\u0a6a\7P\2\2\u0a6a\u0a6b\7G\2\2\u0a6b\u0216\3\2\2\2\u0a6c" +
-					"\u0a70\7?\2\2\u0a6d\u0a6e\7?\2\2\u0a6e\u0a70\7?\2\2\u0a6f\u0a6c\3\2\2" +
-					"\2\u0a6f\u0a6d\3\2\2\2\u0a70\u0218\3\2\2\2\u0a71\u0a72\7>\2\2\u0a72\u0a73" +
-					"\7?\2\2\u0a73\u0a74\7@\2\2\u0a74\u021a\3\2\2\2\u0a75\u0a76\7>\2\2\u0a76" +
-					"\u0a77\7@\2\2\u0a77\u021c\3\2\2\2\u0a78\u0a79\7#\2\2\u0a79\u0a7a\7?\2" +
-					"\2\u0a7a\u021e\3\2\2\2\u0a7b\u0a7c\7>\2\2\u0a7c\u0220\3\2\2\2\u0a7d\u0a7e" +
-					"\7>\2\2\u0a7e\u0a82\7?\2\2\u0a7f\u0a80\7#\2\2\u0a80\u0a82\7@\2\2\u0a81" +
-					"\u0a7d\3\2\2\2\u0a81\u0a7f\3\2\2\2\u0a82\u0222\3\2\2\2\u0a83\u0a84\7@" +
-					"\2\2\u0a84\u0224\3\2\2\2\u0a85\u0a86\7@\2\2\u0a86\u0a8a\7?\2\2\u0a87\u0a88" +
-					"\7#\2\2\u0a88\u0a8a\7>\2\2\u0a89\u0a85\3\2\2\2\u0a89\u0a87\3\2\2\2\u0a8a" +
-					"\u0226\3\2\2\2\u0a8b\u0a8c\7-\2\2\u0a8c\u0228\3\2\2\2\u0a8d\u0a8e\7/\2" +
-					"\2\u0a8e\u022a\3\2\2\2\u0a8f\u0a90\7,\2\2\u0a90\u022c\3\2\2\2\u0a91\u0a92" +
-					"\7\61\2\2\u0a92\u022e\3\2\2\2\u0a93\u0a94\7\'\2\2\u0a94\u0230\3\2\2\2" +
-					"\u0a95\u0a96\7\u0080\2\2\u0a96\u0232\3\2\2\2\u0a97\u0a98\7(\2\2\u0a98" +
-					"\u0234\3\2\2\2\u0a99\u0a9a\7~\2\2\u0a9a\u0236\3\2\2\2\u0a9b\u0a9c\7~\2" +
-					"\2\u0a9c\u0a9d\7~\2\2\u0a9d\u0238\3\2\2\2\u0a9e\u0a9f\7`\2\2\u0a9f\u023a" +
-					"\3\2\2\2\u0aa0\u0aa6\7)\2\2\u0aa1\u0aa5\n\2\2\2\u0aa2\u0aa3\7^\2\2\u0aa3" +
-					"\u0aa5\13\2\2\2\u0aa4\u0aa1\3\2\2\2\u0aa4\u0aa2\3\2\2\2\u0aa5\u0aa8\3" +
-					"\2\2\2\u0aa6\u0aa4\3\2\2\2\u0aa6\u0aa7\3\2\2\2\u0aa7\u0aa9\3\2\2\2\u0aa8" +
-					"\u0aa6\3\2\2\2\u0aa9\u0ab5\7)\2\2\u0aaa\u0ab0\7$\2\2\u0aab\u0aaf\n\3\2" +
-					"\2\u0aac\u0aad\7^\2\2\u0aad\u0aaf\13\2\2\2\u0aae\u0aab\3\2\2\2\u0aae\u0aac" +
-					"\3\2\2\2\u0aaf\u0ab2\3\2\2\2\u0ab0\u0aae\3\2\2\2\u0ab0\u0ab1\3\2\2\2\u0ab1" +
-					"\u0ab3\3\2\2\2\u0ab2\u0ab0\3\2\2\2\u0ab3\u0ab5\7$\2\2\u0ab4\u0aa0\3\2" +
-					"\2\2\u0ab4\u0aaa\3\2\2\2\u0ab5\u023c\3\2\2\2\u0ab6\u0ab8\5\u0257\u012c" +
-					"\2\u0ab7\u0ab6\3\2\2\2\u0ab8\u0ab9\3\2\2\2\u0ab9\u0ab7\3\2\2\2\u0ab9\u0aba" +
-					"\3\2\2\2\u0aba\u0abb\3\2\2\2\u0abb\u0abc\7N\2\2\u0abc\u023e\3\2\2\2\u0abd" +
-					"\u0abf\5\u0257\u012c\2\u0abe\u0abd\3\2\2\2\u0abf\u0ac0\3\2\2\2\u0ac0\u0abe" +
-					"\3\2\2\2\u0ac0\u0ac1\3\2\2\2\u0ac1\u0ac2\3\2\2\2\u0ac2\u0ac3\7U\2\2\u0ac3" +
-					"\u0240\3\2\2\2\u0ac4\u0ac6\5\u0257\u012c\2\u0ac5\u0ac4\3\2\2\2\u0ac6\u0ac7" +
-					"\3\2\2\2\u0ac7\u0ac5\3\2\2\2\u0ac7\u0ac8\3\2\2\2\u0ac8\u0ac9\3\2\2\2\u0ac9" +
-					"\u0aca\7[\2\2\u0aca\u0242\3\2\2\2\u0acb\u0acd\5\u0257\u012c\2\u0acc\u0acb" +
-					"\3\2\2\2\u0acd\u0ace\3\2\2\2\u0ace\u0acc\3\2\2\2\u0ace\u0acf\3\2\2\2\u0acf" +
-					"\u0244\3\2\2\2\u0ad0\u0ad2\5\u0257\u012c\2\u0ad1\u0ad0\3\2\2\2\u0ad2\u0ad3" +
-					"\3\2\2\2\u0ad3\u0ad1\3\2\2\2\u0ad3\u0ad4\3\2\2\2\u0ad4\u0ad5\3\2\2\2\u0ad5" +
-					"\u0ad6\5\u0255\u012b\2\u0ad6\u0adc\3\2\2\2\u0ad7\u0ad8\5\u0253\u012a\2" +
-					"\u0ad8\u0ad9\5\u0255\u012b\2\u0ad9\u0ada\6\u0123\2\2\u0ada\u0adc\3\2\2" +
-					"\2\u0adb\u0ad1\3\2\2\2\u0adb\u0ad7\3\2\2\2\u0adc\u0246\3\2\2\2\u0add\u0ade" +
-					"\5\u0253\u012a\2\u0ade\u0adf\6\u0124\3\2\u0adf\u0248\3\2\2\2\u0ae0\u0ae2" +
-					"\5\u0257\u012c\2\u0ae1\u0ae0\3\2\2\2\u0ae2\u0ae3\3\2\2\2\u0ae3\u0ae1\3" +
-					"\2\2\2\u0ae3\u0ae4\3\2\2\2\u0ae4\u0ae6\3\2\2\2\u0ae5\u0ae7\5\u0255\u012b" +
-					"\2\u0ae6\u0ae5\3\2\2\2\u0ae6\u0ae7\3\2\2\2\u0ae7\u0ae8\3\2\2\2\u0ae8\u0ae9" +
-					"\7H\2\2\u0ae9\u0af2\3\2\2\2\u0aea\u0aec\5\u0253\u012a\2\u0aeb\u0aed\5" +
-					"\u0255\u012b\2\u0aec\u0aeb\3\2\2\2\u0aec\u0aed\3\2\2\2\u0aed\u0aee\3\2" +
-					"\2\2\u0aee\u0aef\7H\2\2\u0aef\u0af0\6\u0125\4\2\u0af0\u0af2\3\2\2\2\u0af1" +
-					"\u0ae1\3\2\2\2\u0af1\u0aea\3\2\2\2\u0af2\u024a\3\2\2\2\u0af3\u0af5\5\u0257" +
-					"\u012c\2\u0af4\u0af3\3\2\2\2\u0af5\u0af6\3\2\2\2\u0af6\u0af4\3\2\2\2\u0af6" +
-					"\u0af7\3\2\2\2\u0af7\u0af9\3\2\2\2\u0af8\u0afa\5\u0255\u012b\2\u0af9\u0af8" +
-					"\3\2\2\2\u0af9\u0afa\3\2\2\2\u0afa\u0afb\3\2\2\2\u0afb\u0afc\7F\2\2\u0afc" +
-					"\u0b05\3\2\2\2\u0afd\u0aff\5\u0253\u012a\2\u0afe\u0b00\5\u0255\u012b\2" +
-					"\u0aff\u0afe\3\2\2\2\u0aff\u0b00\3\2\2\2\u0b00\u0b01\3\2\2\2\u0b01\u0b02" +
-					"\7F\2\2\u0b02\u0b03\6\u0126\5\2\u0b03\u0b05\3\2\2\2\u0b04\u0af4\3\2\2" +
-					"\2\u0b04\u0afd\3\2\2\2\u0b05\u024c\3\2\2\2\u0b06\u0b08\5\u0257\u012c\2" +
-					"\u0b07\u0b06\3\2\2\2\u0b08\u0b09\3\2\2\2\u0b09\u0b07\3\2\2\2\u0b09\u0b0a" +
-					"\3\2\2\2\u0b0a\u0b0c\3\2\2\2\u0b0b\u0b0d\5\u0255\u012b\2\u0b0c\u0b0b\3" +
-					"\2\2\2\u0b0c\u0b0d\3\2\2\2\u0b0d\u0b0e\3\2\2\2\u0b0e\u0b0f\7D\2\2\u0b0f" +
-					"\u0b10\7F\2\2\u0b10\u0b1b\3\2\2\2\u0b11\u0b13\5\u0253\u012a\2\u0b12\u0b14" +
-					"\5\u0255\u012b\2\u0b13\u0b12\3\2\2\2\u0b13\u0b14\3\2\2\2\u0b14\u0b15\3" +
-					"\2\2\2\u0b15\u0b16\7D\2\2\u0b16\u0b17\7F\2\2\u0b17\u0b18\3\2\2\2\u0b18" +
-					"\u0b19\6\u0127\6\2\u0b19\u0b1b\3\2\2\2\u0b1a\u0b07\3\2\2\2\u0b1a\u0b11" +
-					"\3\2\2\2\u0b1b\u024e\3\2\2\2\u0b1c\u0b20\5\u0259\u012d\2\u0b1d\u0b20\5" +
-					"\u0257\u012c\2\u0b1e\u0b20\7a\2\2\u0b1f\u0b1c\3\2\2\2\u0b1f\u0b1d\3\2" +
-					"\2\2\u0b1f\u0b1e\3\2\2\2\u0b20\u0b21\3\2\2\2\u0b21\u0b1f\3\2\2\2\u0b21" +
-					"\u0b22\3\2\2\2\u0b22\u0250\3\2\2\2\u0b23\u0b29\7b\2\2\u0b24\u0b28\n\4" +
-					"\2\2\u0b25\u0b26\7b\2\2\u0b26\u0b28\7b\2\2\u0b27\u0b24\3\2\2\2\u0b27\u0b25" +
-					"\3\2\2\2\u0b28\u0b2b\3\2\2\2\u0b29\u0b27\3\2\2\2\u0b29\u0b2a\3\2\2\2\u0b2a" +
-					"\u0b2c\3\2\2\2\u0b2b\u0b29\3\2\2\2\u0b2c\u0b2d\7b\2\2\u0b2d\u0252\3\2" +
-					"\2\2\u0b2e\u0b30\5\u0257\u012c\2\u0b2f\u0b2e\3\2\2\2\u0b30\u0b31\3\2\2" +
-					"\2\u0b31\u0b2f\3\2\2\2\u0b31\u0b32\3\2\2\2\u0b32\u0b33\3\2\2\2\u0b33\u0b37" +
-					"\7\60\2\2\u0b34\u0b36\5\u0257\u012c\2\u0b35\u0b34\3\2\2\2\u0b36\u0b39" +
-					"\3\2\2\2\u0b37\u0b35\3\2\2\2\u0b37\u0b38\3\2\2\2\u0b38\u0b41\3\2\2\2\u0b39" +
-					"\u0b37\3\2\2\2\u0b3a\u0b3c\7\60\2\2\u0b3b\u0b3d\5\u0257\u012c\2\u0b3c" +
-					"\u0b3b\3\2\2\2\u0b3d\u0b3e\3\2\2\2\u0b3e\u0b3c\3\2\2\2\u0b3e\u0b3f\3\2" +
-					"\2\2\u0b3f\u0b41\3\2\2\2\u0b40\u0b2f\3\2\2\2\u0b40\u0b3a\3\2\2\2\u0b41" +
-					"\u0254\3\2\2\2\u0b42\u0b44\7G\2\2\u0b43\u0b45\t\5\2\2\u0b44\u0b43\3\2" +
-					"\2\2\u0b44\u0b45\3\2\2\2\u0b45\u0b47\3\2\2\2\u0b46\u0b48\5\u0257\u012c" +
-					"\2\u0b47\u0b46\3\2\2\2\u0b48\u0b49\3\2\2\2\u0b49\u0b47\3\2\2\2\u0b49\u0b4a" +
-					"\3\2\2\2\u0b4a\u0256\3\2\2\2\u0b4b\u0b4c\t\6\2\2\u0b4c\u0258\3\2\2\2\u0b4d" +
-					"\u0b4f\t\7\2\2\u0b4e\u0b4d\3\2\2\2\u0b4f\u025a\3\2\2\2\u0b50\u0b51\7/" +
-					"\2\2\u0b51\u0b52\7/\2\2\u0b52\u0b58\3\2\2\2\u0b53\u0b54\7^\2\2\u0b54\u0b57" +
-					"\7\f\2\2\u0b55\u0b57\n\b\2\2\u0b56\u0b53\3\2\2\2\u0b56\u0b55\3\2\2\2\u0b57" +
-					"\u0b5a\3\2\2\2\u0b58\u0b56\3\2\2\2\u0b58\u0b59\3\2\2\2\u0b59\u0b5c\3\2" +
-					"\2\2\u0b5a\u0b58\3\2\2\2\u0b5b\u0b5d\7\17\2\2\u0b5c\u0b5b\3\2\2\2\u0b5c" +
-					"\u0b5d\3\2\2\2\u0b5d\u0b5f\3\2\2\2\u0b5e\u0b60\7\f\2\2\u0b5f\u0b5e\3\2" +
-					"\2\2\u0b5f\u0b60\3\2\2\2\u0b60\u0b61\3\2\2\2\u0b61\u0b62\b\u012e\2\2\u0b62" +
-					"\u025c\3\2\2\2\u0b63\u0b64\7\61\2\2\u0b64\u0b65\7,\2\2\u0b65\u0b66\3\2" +
-					"\2\2\u0b66\u0b6b\6\u012f\7\2\u0b67\u0b6a\5\u025d\u012f\2\u0b68\u0b6a\13" +
-					"\2\2\2\u0b69\u0b67\3\2\2\2\u0b69\u0b68\3\2\2\2\u0b6a\u0b6d\3\2\2\2\u0b6b" +
-					"\u0b6c\3\2\2\2\u0b6b\u0b69\3\2\2\2\u0b6c\u0b6e\3\2\2\2\u0b6d\u0b6b\3\2" +
-					"\2\2\u0b6e\u0b6f\7,\2\2\u0b6f\u0b70\7\61\2\2\u0b70\u0b71\3\2\2\2\u0b71" +
-					"\u0b72\b\u012f\2\2\u0b72\u025e\3\2\2\2\u0b73\u0b75\t\t\2\2\u0b74\u0b73" +
-					"\3\2\2\2\u0b75\u0b76\3\2\2\2\u0b76\u0b74\3\2\2\2\u0b76\u0b77\3\2\2\2\u0b77" +
-					"\u0b78\3\2\2\2\u0b78\u0b79\b\u0130\2\2\u0b79\u0260\3\2\2\2\u0b7a\u0b7b" +
-					"\13\2\2\2\u0b7b\u0262\3\2\2\2P\2\u029f\u02bc\u02c4\u02e5\u02ff\u0365\u0375" +
-					"\u042f\u0463\u0498\u04b9\u04e6\u056b\u059c\u05ae\u05bc\u05c7\u05db\u05f5" +
-					"\u063a\u0663\u066d\u069c\u06fd\u0711\u072b\u0737\u0863\u08a3\u0946\u0976" +
-					"\u0a48\u0a54\u0a6f\u0a81\u0a89\u0aa4\u0aa6\u0aae\u0ab0\u0ab4\u0ab9\u0ac0" +
-					"\u0ac7\u0ace\u0ad3\u0adb\u0ae3\u0ae6\u0aec\u0af1\u0af6\u0af9\u0aff\u0b04" +
-					"\u0b09\u0b0c\u0b13\u0b1a\u0b1f\u0b21\u0b27\u0b29\u0b31\u0b37\u0b3e\u0b40" +
-					"\u0b44\u0b49\u0b4e\u0b56\u0b58\u0b5c\u0b5f\u0b69\u0b6b\u0b76\3\2\3\2";
-
-	private static String[] makeLiteralNames() {
-		return new String[]{
-				null, "';'", "'('", "')'", "','", "'.'", "'/*+'", "'*/'", "'->'", "'['",
-				"']'", "':'", "'ADD'", "'AFTER'", "'ALL'", "'ALTER'", "'ANALYZE'", null,
-				"'ANTI'", "'ANY'", "'ARCHIVE'", "'ARRAY'", null, null, "'AT'", "'AUTHORIZATION'",
-				null, "'BOTH'", "'BUCKET'", "'BUCKETS'", null, "'CACHE'", "'CASCADE'",
-				"'CASE'", "'CAST'", "'CHANGE'", "'CHECK'", "'CLEAR'", "'CLUSTER'", "'CLUSTERED'",
-				"'CODEGEN'", "'COLLATE'", "'COLLECTION'", null, null, "'COMMENT'", "'COMMIT'",
-				"'COMPACT'", "'COMPACTIONS'", "'COMPUTE'", "'CONCATENATE'", "'CONSTRAINT'",
-				"'COST'", "'CREATE'", "'CROSS'", "'CUBE'", "'CURRENT'", "'CURRENT_DATE'",
-				"'CURRENT_TIME'", "'CURRENT_TIMESTAMP'", "'CURRENT_USER'", "'DATA'",
-				"'DATABASE'", null, "'DAY'", "'DBPROPERTIES'", "'DEFINED'", "'DELETE'",
-				"'DELIMITED'", null, "'DESCRIBE'", "'DFS'", "'DIRECTORIES'", "'DIRECTORY'",
-				null, "'DISTRIBUTE'", "'DIV'", "'DROP'", "'ELSE'", null, "'ESCAPE'",
-				"'ESCAPED'", "'EXCEPT'", "'EXCHANGE'", null, "'EXPLAIN'", "'EXPORT'",
-				"'EXTENDED'", "'EXTERNAL'", "'EXTRACT'", "'FALSE'", "'FETCH'", "'FIELDS'",
-				"'FILTER'", "'FILEFORMAT'", "'FIRST'", "'FOLLOWING'", "'FOR'", "'FOREIGN'",
-				"'FORMAT'", "'FORMATTED'", null, "'FULL'", "'FUNCTION'", "'FUNCTIONS'",
-				"'GLOBAL'", "'GRANT'", null, null, null, "'HOUR'", null, "'IGNORE'",
-				"'IMPORT'", null, "'INDEX'", "'INDEXES'", null, "'INPATH'", "'INPUTFORMAT'",
-				"'INSERT'", "'INTERSECT'", "'INTERVAL'", "'INTO'", "'IS'", "'ITEMS'",
-				null, "'KEYS'", "'LAST'", "'LATERAL'", "'LAZY'", "'LEADING'", null, null,
-				"'LIMIT'", "'LINES'", "'LIST'", "'LOAD'", "'LOCAL'", "'LOCATION'", null,
-				"'LOCKS'", "'LOGICAL'", "'MACRO'", "'MAP'", "'MATCHED'", "'MERGE'", "'MINUTE'",
-				"'MONTH'", "'MSCK'", "'NAMESPACE'", "'NAMESPACES'", "'NATURAL'", "'NO'",
-				null, "'NULL'", "'NULLS'", "'OF'", null, "'ONLY'", "'OPTION'", "'OPTIONS'",
-				null, null, "'OUT'", "'OUTER'", "'OUTPUTFORMAT'", "'OVER'", "'OVERLAPS'",
-				"'OVERLAY'", "'OVERWRITE'", "'PARTITION'", "'PARTITIONED'", "'PARTITIONS'",
-				"'PERCENT'", "'PIVOT'", "'PLACING'", "'POSITION'", "'PRECEDING'", "'PRIMARY'",
-				"'PRINCIPALS'", "'PROPERTIES'", "'PURGE'", "'QUERY'", "'RANGE'", "'RECORDREADER'",
-				"'RECORDWRITER'", "'RECOVER'", "'REDUCE'", "'REFERENCES'", "'REFRESH'",
-				"'RENAME'", "'REPAIR'", "'REPLACE'", "'RESET'", "'RESTRICT'", "'REVOKE'",
-				"'RIGHT'", null, "'ROLE'", "'ROLES'", "'ROLLBACK'", "'ROLLUP'", "'ROW'",
-				"'ROWS'", "'SCHEMA'", "'SECOND'", null, "'SEMI'", "'SEPARATED'", "'SERDE'",
-				"'SERDEPROPERTIES'", "'SESSION_USER'", "'SET'", "'MINUS'", "'SETS'",
-				"'SHOW'", "'SKEWED'", "'SOME'", "'SORT'", "'SORTED'", "'START'", "'STATISTICS'",
-				"'STORED'", "'STRATIFY'", "'STRUCT'", "'SUBSTR'", "'SUBSTRING'", null,
-				"'TABLES'", "'TABLESAMPLE'", "'TBLPROPERTIES'", null, "'TERMINATED'",
-				"'THEN'", "'TIME'", "'TO'", "'TOUCH'", "'TRAILING'", "'TRANSACTION'",
-				"'TRANSACTIONS'", "'TRANSFORM'", "'TRIM'", "'TRUE'", "'TRUNCATE'", "'TYPE'",
-				"'UNARCHIVE'", "'UNBOUNDED'", "'UNCACHE'", "'UNION'", "'UNIQUE'", "'UNKNOWN'",
-				"'UNLOCK'", "'UNSET'", "'UPDATE'", "'USE'", "'USER'", "'USING'", "'VALUES'",
-				"'VIEW'", "'VIEWS'", null, null, "'WINDOW'", "'WITH'", "'YEAR'", "'ZONE'",
-				null, "'<=>'", "'<>'", "'!='", "'<'", null, "'>'", null, "'+'", "'-'",
-				"'*'", "'/'", "'%'", "'~'", "'&'", "'|'", "'||'", "'^'"
-		};
-	}
-
 	private boolean BIGDECIMAL_LITERAL_sempred(RuleContext _localctx, int predIndex) {
 		switch (predIndex) {
 			case 4:
@@ -1513,11 +1512,10 @@ public class DataInternetLexer extends Lexer {
 	private boolean BRACKETED_COMMENT_sempred(RuleContext _localctx, int predIndex) {
 		switch (predIndex) {
 			case 5:
-				return !isHint();
+			return !isHint();
 		}
 		return true;
 	}
-
 	static {
 		_decisionToDFA = new DFA[_ATN.getNumberOfDecisions()];
 		for (int i = 0; i < _ATN.getNumberOfDecisions(); i++) {

@@ -1,5 +1,6 @@
 // Generated from /Users/eric/IdeaProjects/DataInternet/src/main/resources/DataInternet.g4 by ANTLR 4.8
 package com.data.connector.engine.sql;
+
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.ATN;
 import org.antlr.v4.runtime.atn.ATNDeserializer;
